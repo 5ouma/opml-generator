@@ -1,3 +1,6 @@
 {
-  "tasks": { "gen": "deno run --allow-read --allow-write ./src/main.ts" }
+  "tasks": { "gen": "deno run --allow-read --allow-write ./src/main.ts" },
+  "imports": {
+    "toml": "https://deno.land/std@0.215.0/toml/mod.ts"
+  }
 }
