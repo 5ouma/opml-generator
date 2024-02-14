@@ -1,0 +1,37 @@
+name: ⬆️ Update OPML in Gist
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  Update:
+    runs-on: Ubuntu-Latest
+
+    steps:
+      - name: 🚚 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🦕 Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: ⬇️ Download TOML file
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          gh gist clone ${{ secrets.TOML_GIST_ID }}
+          mv ${{ secrets.TOML_GIST_ID }}/*.toml ./
+
+      - name: 🧰 Generate OPML file
+        run: deno task gen
+
+      - name: ⬆️ Upload OPML file
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          while read -r file; do
+            gh gist edit ${{ secrets.OPML_GIST_ID }} "$file" -a "$file"
+          done < <(find 'outputs' -name '*.xml')
