@@ -1,0 +1,16 @@
+name: 🥽 Check the Base Branch
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+
+jobs:
+  Branch-Check:
+    runs-on: Ubuntu-Latest
+
+    steps:
+      - name: 🚫 Base Branch is wrong
+        if: ${{ github.head_ref != 'dev' && github.base_ref == 'main' }}
+        run: echo "Base branch should be \`main\`." && return 1
