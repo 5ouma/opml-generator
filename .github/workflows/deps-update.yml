@@ -1,4 +1,4 @@
-name: 📦 Update Dependencies
+name: 🤖 Dependencies Update
 
 on:
   schedule:
@@ -23,7 +23,7 @@ jobs:
           deno-version: v1.x
 
       - name: 📦 Install Molt
-        run: deno install --allow-env --allow-read --allow-write --allow-net --allow-run=git,deno --name molt https://deno.land/x/molt@/cli.ts
+        run: deno install --allow-env --allow-read --allow-write --allow-net --allow-run=git,deno --name molt https://deno.land/x/molt/cli.ts
 
       - name: ⬆️ Update Dependencies
         id: deps
@@ -61,6 +61,8 @@ jobs:
             ${{ steps.body.outputs.content }}
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           branch: deps-deno
+          delete-branch: true
+          base: dev
           title: |
             chore(deps): ${{ steps.title.outputs.content }}
           body: ${{ steps.body.outputs.content }}
