@@ -1,0 +1,23 @@
+name: 🥽 Pull Request Check
+
+on:
+  - pull_request_target
+
+jobs:
+  Labeler:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: Ubuntu-Latest
+
+    steps:
+      - name: 🏷️ Add Labels to the Pull Request
+        uses: actions/labeler@v5
+
+  Branch-Check:
+    runs-on: Ubuntu-Latest
+
+    steps:
+      - name: 🚫 Base Branch is wrong
+        if: ${{ github.head_ref != 'dev' && github.base_ref == 'main' }}
+        run: echo "Base branch should be \`main\`." && return 1
