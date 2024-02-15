@@ -16,8 +16,7 @@ export async function readTOML(file: string): Promise<Lists> {
   }
 }
 
-export async function writeXML(feeds: Lists): Promise<void> {
-  const dir = "outputs";
+export async function writeXML(feeds: Lists, dir: string): Promise<void> {
   await Deno.mkdir(dir, { recursive: true });
   feeds.lists.map(async (list: List) => {
     const file: string = format({
