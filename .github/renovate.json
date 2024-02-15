@@ -1,13 +1,22 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "regexManagers": [
+  "baseBranches": ["dev"],
+  "customManagers": [
     {
-      "fileMatch": ["^deno.json$"],
+      "customType": "regex",
+      "fileMatch": ["^deno.jsonc?$"],
       "matchStrings": [
         "\".+?\"\\s*:\\s*\"(?<depName>https://deno.land/.+?)@v?(?<currentValue>\\d+?\\.\\d+?\\.\\d+?).*?\""
       ],
       "datasourceTemplate": "deno"
     }
-  ]
+  ],
+  "enabledManagers": ["custom.regex"],
+  "labels": ["Type: Dependencies"],
+  "postUpgradeTasks": {
+    "commands": ["deno cache --local-write ./**/*.ts"],
+    "fileFilters": ["deno.json", "deno.jsonc", "deno.lock"],
+    "executionMode": "update"
+  }
 }
