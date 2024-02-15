@@ -18,17 +18,20 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: ⬇️ Download TOML file
-        env:
-          GH_TOKEN: ${{ secrets.TOKEN }}
+      - name: ⬇️ Download TOML and OPML file
         run: |
-          gh gist clone ${{ secrets.TOML_GIST_ID }}
-          mv ${{ secrets.TOML_GIST_ID }}/*.toml ./
+          git clone "https://gist.github.com/${{ secrets.TOML_GIST_ID }}.git" feeds
+          git clone "https://gist.github.com/${{ secrets.OPML_GIST_ID }}.git" outputs
 
       - name: 🧰 Generate OPML file
-        run: deno task gen
+        run: deno task gen --feeds=./feeds/feeds.toml --outputs=./outputs
+
+      - name: 🔍 Check the Result
+        id: result
+        run: echo "changes=$(git -C 'outputs' status --porcelain)" >> "$GITHUB_OUTPUT"
 
       - name: ⬆️ Upload OPML file
+        if: ${{ steps.result.outputs.changes != '' }}
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
         run: |
