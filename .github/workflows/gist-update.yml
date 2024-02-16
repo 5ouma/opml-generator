@@ -28,7 +28,10 @@ jobs:
 
       - name: 🔍 Check the Result
         id: result
-        run: echo "changes=$(git -C 'outputs' status --porcelain)" >> "$GITHUB_OUTPUT"
+        run: |
+          echo 'changes<<EOM' >> "$GITHUB_OUTPUT"
+          git -C 'outputs' status --porcelain >> "$GITHUB_OUTPUT"
+          echo 'EOM' >> "$GITHUB_OUTPUT"
 
       - name: ⬆️ Upload OPML file
         if: ${{ steps.result.outputs.changes != '' }}
