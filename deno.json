@@ -1,15 +1,12 @@
 {
   "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
-  "fmt": {
-    "exclude": ["LICENSE", ".github/**/*.md"]
-  },
-  "test": {
-    "include": ["src/", "test/"]
-  },
+  "fmt": { "exclude": ["LICENSE", ".github/**/*.md"] },
+  "test": { "include": ["src/", "test/"] },
   "tasks": {
-    "clean": "deno fmt && deno cache --lock-write ./**/*.ts",
+    "clean": "deno cache --lock-write ./**/*.ts",
     "gen": "deno run --allow-read --allow-write ./src/main.ts",
-    "test": "deno test --allow-read --allow-write"
+    "test": "deno test --allow-read --allow-write",
+    "update": "deno run --allow-env --allow-read --allow-write --allow-run=git,deno --allow-net=deno.land https://deno.land/x/molt/cli.ts deno.json"
   },
   "imports": {
     "assert": "https://deno.land/std@0.219.0/assert/mod.ts",
