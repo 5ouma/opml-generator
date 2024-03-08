@@ -22,13 +22,10 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: 📦 Install Molt
-        run: deno install --allow-env --allow-read --allow-write --allow-net --allow-run=git,deno --name molt https://deno.land/x/molt/cli.ts
-
       - name: ⬆️ Update Dependencies
         id: deps
         run: |
-          molt -w ./**/*.ts --summary=../title.txt --report=../body.md
+          deno task update -w --summary=../title.txt --report=../body.md
           deno task clean
 
       - name: 🔍 Check the Result
