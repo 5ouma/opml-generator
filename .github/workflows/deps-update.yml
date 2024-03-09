@@ -26,7 +26,7 @@ jobs:
         id: deps
         run: |
           deno task update -w --summary=../title.txt --report=../body.md
-          deno task clean
+          deno task lock
 
       - name: 🔍 Check the Result
         id: result

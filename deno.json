@@ -3,8 +3,8 @@
   "fmt": { "exclude": ["LICENSE", ".github/**/*.md"] },
   "test": { "include": ["src/", "test/"] },
   "tasks": {
-    "clean": "deno cache --lock-write ./**/*.ts",
     "gen": "deno run --allow-read --allow-write ./src/main.ts",
+    "lock": "deno cache --lock-write ./**/*.ts",
     "test": "deno test --allow-read --allow-write",
     "update": "deno run --allow-env --allow-read --allow-write --allow-run=git,deno --allow-net=deno.land https://deno.land/x/molt/cli.ts deno.json"
   },
