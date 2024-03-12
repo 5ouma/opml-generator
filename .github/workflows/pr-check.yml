@@ -23,5 +23,5 @@ jobs:
 
     steps:
       - name: 🚫 Base Branch is wrong
-        if: ${{ github.head_ref != 'dev' && github.base_ref == 'main' }}
+        if: ${{ github.base_ref == 'main' && github.head_ref != 'dev' && !startsWith(github.base_ref, 'tagpr-from-') }}
         run: echo "Base branch should be \`dev\`." && return 1
