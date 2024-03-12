@@ -1,7 +1,11 @@
 name: 🥽 Pull Request Check
 
 on:
-  - pull_request_target
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
 
 jobs:
   Labeler:
@@ -19,5 +23,5 @@ jobs:
 
     steps:
       - name: 🚫 Base Branch is wrong
-        if: ${{ github.head_ref != 'dev' && github.base_ref == 'main' }}
-        run: echo "Base branch should be \`main\`." && return 1
+        if: ${{ github.base_ref == 'main' && github.head_ref != 'dev' }}
+        run: echo "Base branch should be \`dev\`." && exit 1

@@ -1,0 +1,24 @@
+name: 🚀 Release
+
+on:
+  push:
+    branches:
+      - "main"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  Release:
+    runs-on: Ubuntu-Latest
+
+    steps:
+      - name: 🚚 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🏷️ Create a New Tag
+        id: tagpr
+        uses: Songmu/tagpr@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

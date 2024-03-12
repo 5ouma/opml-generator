@@ -1,0 +1,8 @@
+[tagpr]
+  releaseBranch = "main"
+  versionFile = "-"
+  vPrefix = true
+  changelog = false
+  release = true
+  majroLabels = "Type: Breaking Change"
+  minorLabels = "Type: Feature"

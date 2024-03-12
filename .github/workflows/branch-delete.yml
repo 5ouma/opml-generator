@@ -1,0 +1,20 @@
+name: ❌ Branch Delete
+
+on:
+  pull_request:
+    types:
+      - closed
+
+permissions:
+  contents: write
+
+jobs:
+  Delete-Branch:
+    runs-on: Ubuntu-Latest
+
+    steps:
+      - name: ❌ Delete Branch
+        if: ${{ github.head_ref != 'dev'}}
+        uses: SvanBoxel/delete-merged-branch@1.4.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
