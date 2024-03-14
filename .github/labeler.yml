@@ -15,6 +15,6 @@
 "Type: CI":
   - head-branch: ["^ci-"]
 "Type: Dependencies":
-  - head-branch: ["^dep(endency|endencies|s)?-"]
+  - head-branch: ["^dep(endency|endencies|s)?-", "^pre-commit-ci-update-config$"]
 "Type: Meta":
   - head-branch: ["^meta-"]
