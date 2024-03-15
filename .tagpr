@@ -1,5 +1,5 @@
 [tagpr]
-  releaseBranch = "main"
+  releaseBranch = "dev"
   versionFile = "-"
   vPrefix = true
   changelog = false
