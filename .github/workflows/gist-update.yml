@@ -26,18 +26,10 @@ jobs:
       - name: 🧰 Generate OPML file
         run: deno task gen --feeds=./feeds/feeds.toml --outputs=./outputs
 
-      - name: 🔍 Check the Result
-        id: result
-        run: |
-          echo 'changes<<EOM' >> "$GITHUB_OUTPUT"
-          git -C 'outputs' status --porcelain >> "$GITHUB_OUTPUT"
-          echo 'EOM' >> "$GITHUB_OUTPUT"
-
       - name: ⬆️ Upload OPML file
-        if: ${{ steps.result.outputs.changes != '' }}
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
         run: |
           while read -r file; do
-            gh gist edit ${{ secrets.OPML_GIST_ID }} "$file" -a "$file"
-          done < <(find 'outputs' -name '*.xml')
+            gh gist edit ${{ secrets.OPML_GIST_ID }} "./outputs/$file" -a "./outputs/$file"
+          done < <(git -C 'outputs' diff --name-only HEAD)
