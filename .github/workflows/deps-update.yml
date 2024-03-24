@@ -24,9 +24,7 @@ jobs:
 
       - name: ⬆️ Update Dependencies
         id: deps
-        run: |
-          deno task update -w --summary=../title.txt --report=../body.md
-          deno task lock
+        run: deno task update -w --unstable-lock --summary=../title.txt --report=../body.md
 
       - name: 🔍 Check the Result
         id: result
