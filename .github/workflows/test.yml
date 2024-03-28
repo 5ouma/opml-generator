@@ -7,10 +7,12 @@ on:
       - dev
     paths:
       - "**.ts"
+      - "./deno.lock"
       - ".github/workflows/test.yml"
   pull_request:
     paths:
       - "**.ts"
+      - "./deno.lock"
       - ".github/workflows/test.yml"
 
 jobs:
