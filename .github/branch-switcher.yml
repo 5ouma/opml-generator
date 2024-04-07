@@ -1,0 +1,3 @@
+preferredBranch: dev
+exclude:
+  - branch: dev
