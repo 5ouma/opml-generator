@@ -67,6 +67,5 @@ jobs:
           branch: deps-deno
           delete-branch: true
           base: dev
-          title: |
-            chore(deps): ${{ steps.title.outputs.content }}
+          title: "chore(deps): ${{ steps.title.outputs.content }}"
           body: ${{ steps.body.outputs.content }}
