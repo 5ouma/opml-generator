@@ -1,0 +1,2 @@
+exclude: ["dev"]
+delete_closed_pr: true
