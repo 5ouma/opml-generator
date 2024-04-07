@@ -8,16 +8,6 @@ on:
       - edited
 
 jobs:
-  Labeler:
-    permissions:
-      contents: read
-      pull-requests: write
-    runs-on: Ubuntu-Latest
-
-    steps:
-      - name: 🏷️ Add Labels to the Pull Request
-        uses: actions/labeler@v5
-
   Branch-Check:
     runs-on: Ubuntu-Latest
 
