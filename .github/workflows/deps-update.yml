@@ -46,19 +46,10 @@ jobs:
         with:
           path: ../body.md
 
-      - name: 💳 Create GitHub App Token
-        if: ${{ steps.result.outputs.files_exists == 'true' }}
-        uses: actions/create-github-app-token@v1
-        id: app-token
-        with:
-          app-id: ${{ secrets.APP_ID }}
-          private-key: ${{ secrets.PRIVATE_KEY }}
-
       - name: 🎈 Create Pull Request
         if: ${{ steps.result.outputs.files_exists == 'true' }}
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ steps.app-token.outputs.token }}
           commit-message: |
             chore(deps): ${{ steps.title.outputs.content }}
 
