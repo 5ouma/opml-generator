@@ -32,7 +32,8 @@ Body
 ## ❓ Pull Requests Title
 
 You don't need to add any prefixes like `feature` or `bug fix`
-to the Pull Requests title because I can recognize what kind of PR it is from labels.
+to the Pull Requests title.
+I can recognize what kind of PR it is from labels.
 Please give a clear title.
 
 <br />
