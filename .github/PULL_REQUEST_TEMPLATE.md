@@ -7,6 +7,19 @@
 - [ ] This Pull Request introduces a new feature.
 - [ ] This Pull Request fixes a bug.
 
+### Type of the Change
+
+- [ ] Feature
+- [ ] Bug
+- [ ] Security
+- [ ] Documentation
+- [ ] Refactoring
+- [ ] Testing
+- [ ] Maintenance
+- [ ] CI
+- [ ] Dependencies
+- [ ] Meta
+
 ### Description
 
 <!--
