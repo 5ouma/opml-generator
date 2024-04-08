@@ -12,7 +12,7 @@ changelog:
       labels: ["Type: Feature"]
     - title: 🧰 Bug Fixes
       labels: ["Type: Bug"]
-    - title: 🔐 Security Fixes
+    - title: 🛡️ Security Fixes
       labels: ["Type: Security"]
     - title: 📖 Documentation Changes
       labels: ["Type: Documentation"]
@@ -26,5 +26,5 @@ changelog:
       labels: ["Type: CI"]
     - title: ⛓️ Dependency Updates
       labels: ["Type: Dependencies", "dependencies"]
-    - title: 🚐 Other Changes
+    - title: 🔍 Other Changes
       labels: ["*"]
