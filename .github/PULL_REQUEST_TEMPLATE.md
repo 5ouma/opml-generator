@@ -15,16 +15,16 @@ close #
 
 ### 🔄 Type of the Change
 
-- [ ] Feature
-- [ ] Bug
-- [ ] Security
-- [ ] Documentation
-- [ ] Refactoring
-- [ ] Testing
-- [ ] Maintenance
-- [ ] CI
-- [ ] Dependencies
-- [ ] Meta
+- [ ] 🎉 Feature
+- [ ] 🧰 Bug
+- [ ] 🛡️ Security
+- [ ] 📖 Documentation
+- [ ] 🧹 Refactoring
+- [ ] 🧪 Testing
+- [ ] 🔧 Maintenance
+- [ ] 🎽 CI
+- [ ] ⛓️ Dependencies
+- [ ] 🧠 Meta
 
 <br />
 
