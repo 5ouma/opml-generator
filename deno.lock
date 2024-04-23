@@ -140,13 +140,13 @@
     "https://deno.land/x/case@2.2.0/vendor/camelCaseRegexp.ts": "7d9ff02aad4ab6429eeab7c7353f7bcdd6cc5909a8bd3dda97918c8bbb7621ae",
     "https://deno.land/x/case@2.2.0/vendor/camelCaseUpperRegexp.ts": "292de54a698370f90adcdf95727993d09888b7f33d17f72f8e54ba75f7791787",
     "https://deno.land/x/case@2.2.0/vendor/nonWordRegexp.ts": "c1a052629a694144b48c66b0175a22a83f4d61cb40f4e45293fc5d6b123f927e",
-    "https://deno.land/x/xml@3.0.0/mod.ts": "4a314a7a28d1ec92f899ce4c6991f0356c77550a75955ec3f4a36733f08548e8",
-    "https://deno.land/x/xml@3.0.0/parse.ts": "614b8648345ae93c641368836947484d321c7ac9312ae12ec750434353cd7385",
-    "https://deno.land/x/xml@3.0.0/stringify.ts": "930d35431f153b29d36549cff08fcfbe978e52ccb56af1e3baa2e0760f418b04",
-    "https://deno.land/x/xml@3.0.0/utils/parser.ts": "65d7dff67cd9c99ffcb244820bdb9fbceca0b949407beeb50433ad81d60e4a2b",
-    "https://deno.land/x/xml@3.0.0/utils/stream.ts": "056e2f368d47932d77e431bbc4a8292359171cc9ce881ea31ce0aae30d763e68",
-    "https://deno.land/x/xml@3.0.0/utils/streamable.ts": "1603a5f10c859b95d4e9502365a0fba0b19d5d068356e20d5a6813cd37fee780",
-    "https://deno.land/x/xml@3.0.0/utils/stringifier.ts": "699c74bf061e979d9b6ac5b7184c2107a6e6cab4125be249aac7f848b324777c",
-    "https://deno.land/x/xml@3.0.0/utils/types.ts": "a684a22006d0996f772738c4a022ff85463e5b146418baa50d9846d321d06fb3"
+    "https://deno.land/x/xml@4.0.0/mod.ts": "4a314a7a28d1ec92f899ce4c6991f0356c77550a75955ec3f4a36733f08548e8",
+    "https://deno.land/x/xml@4.0.0/parse.ts": "057782a8fbee64ebcc608896010016f4579b6799cdd4fe8da9cb1a134b83e92f",
+    "https://deno.land/x/xml@4.0.0/stringify.ts": "2c65c95e614d133a16dcd637d4c84927ed55f928eabe6029c4a3ece87f0bcb3d",
+    "https://deno.land/x/xml@4.0.0/utils/parser.ts": "1c0701421fd342da5f57dbf3d2ad82956517cb88f15027c3b6628ee1870e59b1",
+    "https://deno.land/x/xml@4.0.0/utils/stream.ts": "4cfd7e4daf11cdae80ba636ba0d10ca79cc8812365d66cb9d7b1d777af419e19",
+    "https://deno.land/x/xml@4.0.0/utils/streamable.ts": "1603a5f10c859b95d4e9502365a0fba0b19d5d068356e20d5a6813cd37fee780",
+    "https://deno.land/x/xml@4.0.0/utils/stringifier.ts": "699c74bf061e979d9b6ac5b7184c2107a6e6cab4125be249aac7f848b324777c",
+    "https://deno.land/x/xml@4.0.0/utils/types.ts": "f5dd32c96f85813a93d155bf8eb2aba88e11c7805c87e97aff12cbaa48db627b"
   }
 }
