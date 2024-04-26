@@ -8,10 +8,10 @@
     "update": "deno run --allow-env --allow-read --allow-write --allow-run=git,deno --allow-net=deno.land https://deno.land/x/molt/cli.ts deno.json"
   },
   "imports": {
-    "assert": "https://deno.land/std@0.223.0/assert/mod.ts",
-    "path": "https://deno.land/std@0.223.0/path/mod.ts",
-    "toml": "https://deno.land/std@0.223.0/toml/mod.ts",
-    "parse_args": "https://deno.land/std@0.223.0/cli/parse_args.ts",
+    "assert": "https://deno.land/std@0.224.0/assert/mod.ts",
+    "path": "https://deno.land/std@0.224.0/path/mod.ts",
+    "toml": "https://deno.land/std@0.224.0/toml/mod.ts",
+    "parse_args": "https://deno.land/std@0.224.0/cli/parse_args.ts",
     "case": "https://deno.land/x/case@2.2.0/mod.ts",
     "xml": "https://deno.land/x/xml@4.0.0/mod.ts"
   }
