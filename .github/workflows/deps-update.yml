@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: 🚚 Checkout Repository
         uses: actions/checkout@v4
+        with:
+          ref: dev
 
       - name: 🦕 Setup Deno
         uses: denoland/setup-deno@v1
