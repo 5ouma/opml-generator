@@ -23,7 +23,7 @@ repos:
         args: [--whitespaces-count, "2"]
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.20.10
+    rev: v1.21.0
     hooks:
       - id: typos
 
@@ -38,7 +38,7 @@ repos:
       - id: actionlint
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.39.0
+    rev: v0.40.0
     hooks:
       - id: markdownlint-fix
         args: ["--disable", "MD013", "MD023", "MD024", "MD033", "MD036"]
