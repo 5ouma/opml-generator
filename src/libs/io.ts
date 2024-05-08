@@ -1,5 +1,5 @@
-import { paramCase } from "case";
-import { format } from "path";
+import { paramCase } from "@wok/case";
+import { format } from "@std/path";
 import { List, Lists } from "../types/mod.ts";
 import { convertToOPML, convertToTOML } from "./mod.ts";
 
