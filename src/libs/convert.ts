@@ -25,5 +25,5 @@ export function convertToOPML(list: List): string {
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 ${stringify({ opml: { "@version": "2.0", body: [body] } })}
-`.replaceAll("amp;", "");
+`;
 }
