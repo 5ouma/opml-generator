@@ -1,4 +1,4 @@
-import { assertEquals } from "assert";
+import { assertEquals } from "@std/assert";
 import { convertToOPML, convertToTOML } from "../../src/libs/mod.ts";
 import { List, Lists } from "../../src/types/mod.ts";
 

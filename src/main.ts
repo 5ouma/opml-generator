@@ -1,5 +1,5 @@
-import { parseArgs } from "parse_args";
-import { basename, resolve } from "path";
+import { parseArgs } from "@std/cli";
+import { basename, resolve } from "@std/path";
 import { readTOML, writeXML } from "./libs/mod.ts";
 import { Lists } from "./types/mod.ts";
 

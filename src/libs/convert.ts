@@ -1,5 +1,5 @@
-import { stringify } from "xml";
-import { parse } from "toml";
+import { stringify } from "@lowlighter/xml";
+import { parse } from "@std/toml";
 import { Feed, List, Lists, OPMLOutline } from "../types/mod.ts";
 
 export function convertToTOML(data: string): Lists {
