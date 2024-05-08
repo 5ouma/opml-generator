@@ -1,5 +1,5 @@
 import { parseArgs } from "parse_args";
-import { resolve } from "path";
+import { basename, resolve } from "path";
 import { readTOML, writeXML } from "./libs/mod.ts";
 import { Lists } from "./types/mod.ts";
 
@@ -20,3 +20,4 @@ try {
   console.error(`🚨 ${error.message}`);
   Deno.exit(1);
 }
+console.log(`✅ ${basename(flags.feeds)}`);
