@@ -1,4 +1,4 @@
-import { stringify } from "@lowlighter/xml";
+import { stringify } from "@libs/xml";
 import { parse } from "@std/toml";
 import { Feed, List, Lists, OPMLOutline } from "../types/mod.ts";
 
