@@ -19,46 +19,11 @@ jobs:
         with:
           ref: dev
 
-      - name: 🦕 Setup Deno
-        uses: denoland/setup-deno@v1
+      - name: 🦕 Update Dependencies
+        uses: hasundue/molt-action@v1-rc
         with:
-          deno-version: v1.x
-
-      - name: ⬆️ Update Dependencies
-        id: deps
-        run: deno task update -w --unstable-lock --summary=../title.txt --report=../body.md
-
-      - name: 🔍 Check the Result
-        id: result
-        uses: andstor/file-existence-action@v3
-        with:
-          files: ../title.txt, ../body.md
-
-      - name: 📘 Read title.txt
-        id: title
-        if: ${{ steps.result.outputs.files_exists == 'true' }}
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ../title.txt
-
-      - name: 📕 Read body.md
-        id: body
-        if: ${{ steps.result.outputs.files_exists == 'true' }}
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ../body.md
-
-      - name: 🎈 Create Pull Request
-        if: ${{ steps.result.outputs.files_exists == 'true' }}
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: |
-            chore(deps): ${{ steps.title.outputs.content }}
-
-            ${{ steps.body.outputs.content }}
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          branch: deps-deno
-          delete-branch: true
           base: dev
-          title: "chore(deps): ${{ steps.title.outputs.content }}"
-          body: ${{ steps.body.outputs.content }}
+          branch: deps-deno
+          commit-prefix: "chore(deps):"
+          labels: "Type: Dependencies"
