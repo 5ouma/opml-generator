@@ -3,13 +3,11 @@
   "packages": {
     "specifiers": {
       "jsr:@lowlighter/xml@^4.0.1": "jsr:@lowlighter/xml@4.0.1",
-      "jsr:@std/assert@^0.224.0": "jsr:@std/assert@0.224.0",
-      "jsr:@std/assert@^0.225.1": "jsr:@std/assert@0.225.1",
-      "jsr:@std/cli@^0.224.1": "jsr:@std/cli@0.224.1",
-      "jsr:@std/collections@^0.224.0": "jsr:@std/collections@0.224.1",
-      "jsr:@std/fmt@^0.225.0": "jsr:@std/fmt@0.225.0",
-      "jsr:@std/internal@^0.225.0": "jsr:@std/internal@0.225.0",
-      "jsr:@std/path@^0.224.0": "jsr:@std/path@0.224.0",
+      "jsr:@std/assert@^0.225.2": "jsr:@std/assert@0.225.2",
+      "jsr:@std/cli@^0.224.2": "jsr:@std/cli@0.224.2",
+      "jsr:@std/collections@^0.224.0": "jsr:@std/collections@0.224.2",
+      "jsr:@std/internal@^0.225.1": "jsr:@std/internal@0.225.1",
+      "jsr:@std/path@^0.225.1": "jsr:@std/path@0.225.1",
       "jsr:@std/toml@^0.224.0": "jsr:@std/toml@0.224.0",
       "jsr:@wok/case@^1.0.1": "jsr:@wok/case@1.0.1"
     },
@@ -17,35 +15,28 @@
       "@lowlighter/xml@4.0.1": {
         "integrity": "91fec6ea3c2479187148d4ac9de1ab3b92859b9ce96f6df1b1f1a40c6dcf9281"
       },
-      "@std/assert@0.224.0": {
-        "integrity": "8643233ec7aec38a940a8264a6e3eed9bfa44e7a71cc6b3c8874213ff401967f"
-      },
-      "@std/assert@0.225.1": {
-        "integrity": "7342fa32a6d82c2c7c98ffea566baa9a892d04b22815b9fcf62cedeee5764f9c",
+      "@std/assert@0.225.2": {
+        "integrity": "6fd566c3ea01654d29c2b633298b7fc7599716336233852eb87e9843658fa192",
         "dependencies": [
-          "jsr:@std/fmt@^0.225.0",
-          "jsr:@std/internal@^0.225.0"
+          "jsr:@std/internal@^0.225.1"
         ]
       },
-      "@std/cli@0.224.1": {
-        "integrity": "f631d47fc9802541399d00a1f77ac62ac709e7465b6bc52547caa358c486b36e",
+      "@std/cli@0.224.2": {
+        "integrity": "be330ce49928db596338b411037b082d8f8f218b34f8095bcad382fb0c3d6b31",
         "dependencies": [
-          "jsr:@std/assert@^0.225.1"
+          "jsr:@std/assert@^0.225.2"
         ]
       },
-      "@std/collections@0.224.1": {
-        "integrity": "c003ecb1b89e46440cbe692a0603193ed8496d738310a9a2d51b8f8ed8d97a65"
+      "@std/collections@0.224.2": {
+        "integrity": "e77819455294e92d4e7ddad1dbfd46f94174c09318e541e6621fac4a4d0ab326"
       },
-      "@std/fmt@0.225.0": {
-        "integrity": "982e7d1a8b8869338cc5b58e2669f7c6889ea9822f1278494dc43edba7f4c4b4"
+      "@std/internal@0.225.1": {
+        "integrity": "7d8a812be88c2792f15ab9cf46911e521ccca50435948a8f24df5cefda96bde9"
       },
-      "@std/internal@0.225.0": {
-        "integrity": "6f501a91aa5ee992f8f9ffb45fa103bc04031df65f6a3550e1c5d7e6304cd34a"
-      },
-      "@std/path@0.224.0": {
-        "integrity": "55bca6361e5a6d158b9380e82d4981d82d338ec587de02951e2b7c3a24910ee6",
+      "@std/path@0.225.1": {
+        "integrity": "8c3220635a73730eb51fe43de9e10b79e2724a5bb8638b9355d35ae012fd9429",
         "dependencies": [
-          "jsr:@std/assert@^0.224.0"
+          "jsr:@std/assert@^0.225.2"
         ]
       },
       "@std/toml@0.224.0": {
@@ -63,9 +54,9 @@
   "workspace": {
     "dependencies": [
       "jsr:@lowlighter/xml@^4.0.1",
-      "jsr:@std/assert@^0.225.1",
-      "jsr:@std/cli@^0.224.1",
-      "jsr:@std/path@^0.224.0",
+      "jsr:@std/assert@^0.225.2",
+      "jsr:@std/cli@^0.224.2",
+      "jsr:@std/path@^0.225.1",
       "jsr:@std/toml@^0.224.0",
       "jsr:@wok/case@^1.0.1"
     ]
