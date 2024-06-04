@@ -1,4 +1,4 @@
-import { assertEquals } from "@std/assert";
+import { assertEquals, assertIsError } from "@std/assert";
 import { join } from "@std/path";
 import {
   convertToOPML,
@@ -23,6 +23,32 @@ xmlUrl = "https://example.com/feed"
   const lists: Lists = await readTOML(file);
 
   assertEquals(convertToTOML(toml), lists);
+});
+
+Deno.test("Read TOML (File not found)", async () => {
+  try {
+    await readTOML("file-not-found.toml");
+  } catch (error) {
+    assertEquals(error.message, 'File not found: "file-not-found.toml"');
+  }
+});
+
+Deno.test("Read TOML (Permission denied)", async () => {
+  const file: string = await Deno.makeTempFile({ suffix: ".toml" });
+  await Deno.chmod(file, 0o000);
+  try {
+    await readTOML(file);
+  } catch (error) {
+    assertEquals(error.message, `Permission denied: "${file}"`);
+  }
+});
+
+Deno.test("Read TOML (Unexpected error)", async () => {
+  try {
+    await readTOML("");
+  } catch (error) {
+    assertIsError(error);
+  }
 });
 
 Deno.test("Write XML", async () => {
