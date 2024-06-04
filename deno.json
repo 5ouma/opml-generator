@@ -4,7 +4,7 @@
   "test": { "include": ["src/", "test/"] },
   "tasks": {
     "gen": "deno run --allow-read --allow-write ./src/main.ts",
-    "test": "deno test --allow-read --allow-write"
+    "test": "deno test --allow-read --allow-write --parallel --shuffle"
   },
   "imports": {
     "@libs/xml": "jsr:@libs/xml@5.4.6",
