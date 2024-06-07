@@ -22,34 +22,48 @@
 
 OPML Generator has 2 ways to convert TOML to OPML.
 
-1. ### 💻 On Local
+### 💻 On Local
 
-   1. 📰 Prepare your TOML file (Reference: [feeds.toml](./assets/example/feeds.toml)).
+1. Prepare your TOML file (Reference: [feeds.toml](./assets/example/feeds.toml))
 
-   2. 🦕 Run Deno Task
+2. Clone this repository
 
-      ```shell
-      deno task gen
-      ```
+   ```sh
+   git clone https://github.com/5ouma/opml-generator.git
+   ```
 
-   3. 🗞️ Outputs are stored in the `outputs` directory separated by `lists`.
+3. Run Deno Task
 
-2. ### 🐙 On GitHub Actions
+   ```shell
+   deno task gen
+   ```
 
-   1. 🗒️ Create [a Gist](https://gist.github.com):
-      - includes [`feeds.toml`](./assets/example/feeds.toml).
-      - for outputs.
-   2. 🔑 Create [a Personal Access Token] with the `Gist` permission.
-   3. 🍴 [Fork this repository](https://github.com/5ouma/opml-generator/fork)
-   4. 🔏 Add Actions secrets
-      from `Settings > Secrets and variables | Actions` in the sidebar:
-      - `TOML_GIST_ID`: Gist ID for [`feeds.toml`](./assets/example/feeds.toml)
-      - `OPML_GIST_ID`: Gist ID for outputs
-      - `TOKEN`: Personal Access Token
-   5. ✅ Enable GitHub Actions by checking `Allow all actions and reusable workflows`
-      from `Settings > Actions | General` in the sidebar.
+4. Outputs are stored in the `outputs` directory separated by `lists`
 
-   🎉 Automatically update every 0 a.m. UTC
+<br />
+
+### 🐙 On GitHub Actions
+
+1. Create [a Gist](https://gist.github.com):
+
+   - includes [`feeds.toml`](./assets/example/feeds.toml)
+   - for outputs
+
+2. Create [a Personal Access Token] with the `Gist` permission
+
+3. [Fork this repository](https://github.com/5ouma/opml-generator/fork)
+
+4. Add Actions secrets
+   from `Settings > Secrets and variables | Actions` in the sidebar:
+
+   - `TOML_GIST_ID`: Gist ID for [`feeds.toml`](./assets/example/feeds.toml)
+   - `OPML_GIST_ID`: Gist ID for outputs
+   - `TOKEN`: Personal Access Token
+
+5. Enable GitHub Actions by checking `Allow all actions and reusable workflows`
+   from `Settings > Actions | General` in the sidebar
+
+🎉 Automatically update every 0 a.m. UTC
 
 [a Personal Access Token]: https://github.com/settings/tokens
 
