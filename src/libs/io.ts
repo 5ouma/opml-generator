@@ -1,17 +1,17 @@
 import { paramCase } from "@wok/case";
 import { format } from "@std/path";
-import { List, Lists } from "../types/mod.ts";
-import { convertToOPML, convertToTOML } from "./mod.ts";
+import { convertToOPML, convertToTOML } from "./convert.ts";
+import type { List, Lists } from "../types/mod.ts";
 
 export async function readTOML(file: string): Promise<Lists> {
   try {
     const data: string = await Deno.readTextFile(file);
-    return await convertToTOML(data);
+    return convertToTOML(data);
   } catch (error) {
     if (error instanceof Deno.errors.NotFound) {
-      throw Error(`File not found: "${file}"`);
+      throw new Error(`File not found: "${file}"`);
     } else if (error instanceof Deno.errors.PermissionDenied) {
-      throw Error(`Permission denied: "${file}"`);
+      throw new Error(`Permission denied: "${file}"`);
     } else throw error;
   }
 }

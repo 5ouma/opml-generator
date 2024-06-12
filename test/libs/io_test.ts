@@ -1,12 +1,8 @@
-import { assertEquals } from "@std/assert";
+import { assertEquals, assertIsError } from "@std/assert";
 import { join } from "@std/path";
-import {
-  convertToOPML,
-  convertToTOML,
-  readTOML,
-  writeXML,
-} from "../../src/libs/mod.ts";
-import { Lists } from "../../src/types/toml.ts";
+import { readTOML, writeXML } from "../../src/libs/io.ts";
+import { convertToOPML, convertToTOML } from "../../src/libs/convert.ts";
+import type { Lists } from "../../src/types/mod.ts";
 
 Deno.test("Read TOML", async () => {
   const toml = `
@@ -25,13 +21,43 @@ xmlUrl = "https://example.com/feed"
   assertEquals(convertToTOML(toml), lists);
 });
 
+Deno.test("Read TOML (File not found)", async () => {
+  try {
+    await readTOML("file-not-found.toml");
+  } catch (error) {
+    assertEquals(error.message, 'File not found: "file-not-found.toml"');
+  }
+});
+
+Deno.test("Read TOML (Permission denied)", async () => {
+  const file: string = await Deno.makeTempFile({ suffix: ".toml" });
+  await Deno.chmod(file, 0o000);
+  try {
+    await readTOML(file);
+  } catch (error) {
+    assertEquals(error.message, `Permission denied: "${file}"`);
+  }
+});
+
+Deno.test("Read TOML (Unexpected error)", async () => {
+  try {
+    await readTOML("");
+  } catch (error) {
+    assertIsError(error);
+  }
+});
+
 Deno.test("Write XML", async () => {
   const feeds: Lists = {
     lists: [
       {
         name: "list name",
         feeds: [
-          { title: "feed title", xmlUrl: new URL("https://example.com/feed") },
+          {
+            title: "feed title",
+            text: "feed title",
+            xmlUrl: new URL("https://example.com/feed"),
+          },
         ],
       },
     ],

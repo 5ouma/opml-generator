@@ -1,6 +1,6 @@
 import { assertEquals } from "@std/assert";
-import { convertToOPML, convertToTOML } from "../../src/libs/mod.ts";
-import { List, Lists } from "../../src/types/mod.ts";
+import { convertToOPML, convertToTOML } from "../../src/libs/convert.ts";
+import type { List, Lists } from "../../src/types/mod.ts";
 
 Deno.test("Parse TOML", () => {
   const feeds: Lists = {
@@ -8,7 +8,11 @@ Deno.test("Parse TOML", () => {
       {
         name: "list name",
         feeds: [
-          { title: "feed title", xmlUrl: new URL("https://example.com/feed") },
+          {
+            title: "feed title",
+            text: "feed title",
+            xmlUrl: new URL("https://example.com/feed"),
+          },
         ],
       },
     ],
@@ -20,6 +24,7 @@ name = "list name"
 
 [[lists.feeds]]
 title = "feed title"
+text = "feed title"
 xmlUrl = "https://example.com/feed"
 `;
 
@@ -31,7 +36,7 @@ Deno.test("Convert Lists to OPML", () => {
 <?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0">
   <body>
-    <outline title="feed title" xmlUrl="https://example.com/feed" type="rss"/>
+    <outline title="feed title" text="feed title" xmlUrl="https://example.com/feed" type="rss"/>
   </body>
 </opml>
 `;
@@ -41,6 +46,7 @@ Deno.test("Convert Lists to OPML", () => {
     feeds: [
       {
         title: "feed title",
+        text: "feed title",
         xmlUrl: new URL("https://example.com/feed"),
       },
     ],

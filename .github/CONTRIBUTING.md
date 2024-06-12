@@ -54,7 +54,7 @@ flowchart LR
   end
 
   feature1 & feature2 & feature3 -- Squash Merge --> dev
-  dev -- Rebase Merge --> main
+  dev -- Merge --> main
 ```
 
 <br />

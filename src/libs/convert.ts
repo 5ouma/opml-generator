@@ -1,6 +1,6 @@
 import { stringify } from "@libs/xml";
 import { parse } from "@std/toml";
-import { Feed, List, Lists, OPMLOutline } from "../types/mod.ts";
+import type { Feed, List, Lists, OPMLOutline } from "../types/mod.ts";
 
 export function convertToTOML(data: string): Lists {
   const lists: Lists = parse(data) as Lists;
@@ -17,6 +17,7 @@ export function convertToOPML(list: List): string {
     outline: list.feeds.map((feed: Feed): OPMLOutline => {
       return {
         "@title": feed.title,
+        "@text": feed.title,
         "@xmlUrl": feed.xmlUrl,
         "@type": "rss",
       };
