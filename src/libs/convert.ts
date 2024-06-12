@@ -17,6 +17,7 @@ export function convertToOPML(list: List): string {
     outline: list.feeds.map((feed: Feed): OPMLOutline => {
       return {
         "@title": feed.title,
+        "@text": feed.title,
         "@xmlUrl": feed.xmlUrl,
         "@type": "rss",
       };
