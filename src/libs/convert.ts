@@ -1,6 +1,6 @@
 import { stringify } from "@libs/xml";
 import { parse } from "@std/toml";
-import { Feed, List, Lists, OPMLOutline } from "../types/mod.ts";
+import type { Feed, List, Lists, OPMLOutline } from "../types/mod.ts";
 
 export function convertToTOML(data: string): Lists {
   const lists: Lists = parse(data) as Lists;
