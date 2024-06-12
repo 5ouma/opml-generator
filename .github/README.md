@@ -13,6 +13,7 @@
 [![Test](https://img.shields.io/github/actions/workflow/status/5ouma/opml-generator/test.yml?label=test&style=flat-square)](https://github.com/5ouma/opml-generator/actions/workflows/test.yml)
 [![Gist Update](https://img.shields.io/github/actions/workflow/status/5ouma/opml-generator/gist-update.yml?label=Gist%20Update&style=flat-square)](https://github.com/5ouma/opml-generator/actions/workflows/gist-update.yml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/5ouma/opml-generator/main.svg?style=flat-square)](https://results.pre-commit.ci/latest/github/5ouma/opml-generator/main)
+[![codecov](https://codecov.io/github/5ouma/opml-generator/graph/badge.svg?token=ICJ7C3IDX7)](https://codecov.io/github/5ouma/opml-generator)
 
 </div>
 
