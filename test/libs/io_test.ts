@@ -57,7 +57,11 @@ Deno.test("Write XML", async () => {
       {
         name: "list name",
         feeds: [
-          { title: "feed title", xmlUrl: new URL("https://example.com/feed") },
+          {
+            title: "feed title",
+            text: "feed title",
+            xmlUrl: new URL("https://example.com/feed"),
+          },
         ],
       },
     ],
