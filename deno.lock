@@ -3,7 +3,7 @@
   "packages": {
     "specifiers": {
       "jsr:@libs/typing@2": "jsr:@libs/typing@2.1.1",
-      "jsr:@libs/xml@5.4.6": "jsr:@libs/xml@5.4.6",
+      "jsr:@libs/xml@5.4.7": "jsr:@libs/xml@5.4.7",
       "jsr:@std/assert@0.226.0": "jsr:@std/assert@0.226.0",
       "jsr:@std/assert@^0.226.0": "jsr:@std/assert@0.226.0",
       "jsr:@std/cli@0.224.6": "jsr:@std/cli@0.224.6",
@@ -17,8 +17,8 @@
       "@libs/typing@2.1.1": {
         "integrity": "964e61860716140671718b170d8de4a8705e05d86e7ed0c41883fe2687c91c80"
       },
-      "@libs/xml@5.4.6": {
-        "integrity": "9148f9d2d88030e766f120c82a43f7382eb29654dd50f9871ae24fdd4d0a60bb",
+      "@libs/xml@5.4.7": {
+        "integrity": "6a5ccb4ae832cbb6947e8cb73eaf41eeb38dabbf68e041252055a2d5233afca7",
         "dependencies": [
           "jsr:@libs/typing@2"
         ]
@@ -58,7 +58,7 @@
   "remote": {},
   "workspace": {
     "dependencies": [
-      "jsr:@libs/xml@5.4.6",
+      "jsr:@libs/xml@5.4.7",
       "jsr:@std/assert@0.226.0",
       "jsr:@std/cli@0.224.6",
       "jsr:@std/path@0.225.2",
