@@ -1,6 +1,6 @@
 import { assertEquals } from "@std/assert";
-import { convertToOPML, convertToTOML } from "../../src/libs/mod.ts";
-import { List, Lists } from "../../src/types/mod.ts";
+import { convertToOPML, convertToTOML } from "../../src/libs/convert.ts";
+import type { List, Lists } from "../../src/types/mod.ts";
 
 Deno.test("Parse TOML", () => {
   const feeds: Lists = {

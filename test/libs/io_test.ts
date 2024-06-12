@@ -1,12 +1,8 @@
 import { assertEquals, assertIsError } from "@std/assert";
 import { join } from "@std/path";
-import {
-  convertToOPML,
-  convertToTOML,
-  readTOML,
-  writeXML,
-} from "../../src/libs/mod.ts";
-import { Lists } from "../../src/types/toml.ts";
+import { readTOML, writeXML } from "../../src/libs/io.ts";
+import { convertToOPML, convertToTOML } from "../../src/libs/convert.ts";
+import type { Lists } from "../../src/types/mod.ts";
 
 Deno.test("Read TOML", async () => {
   const toml = `
