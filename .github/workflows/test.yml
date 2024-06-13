@@ -21,10 +21,10 @@ jobs:
 
     steps:
       - name: 🚚 Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
 
       - name: 🦕 Setup Deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@041b854f97b325bd60e53e9dc2de9cb9f9ac0cba # v1.1.4
         with:
           deno-version: v1.x
 
@@ -41,6 +41,6 @@ jobs:
         run: deno check ./**/*.ts
 
       - name: ☂️ Upload Coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@e28ff129e5465c2c0dcc6f003fc735cb6ae0c673 # v4.5.0
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
