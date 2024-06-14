@@ -1,12 +1,12 @@
 import { paramCase } from "@wok/case";
 import { format } from "@std/path";
-import { convertToOPML, convertToTOML } from "./convert.ts";
+import { convertFromTOML, convertToOPML } from "./convert.ts";
 import type { List, Lists } from "../types/mod.ts";
 
 export async function readTOML(file: string): Promise<Lists> {
   try {
     const data: string = await Deno.readTextFile(file);
-    return convertToTOML(data);
+    return convertFromTOML(data);
   } catch (error) {
     if (error instanceof Deno.errors.NotFound) {
       throw new Error(`File not found: "${file}"`);
