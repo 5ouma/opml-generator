@@ -1,12 +1,14 @@
 import { stringify } from "@libs/xml";
 import { parse } from "@std/toml";
+import { transcodeXmlUrl } from "./sites.ts";
 import type { Feed, List, Lists, OPMLOutline } from "../types/mod.ts";
 
 export function convertFromTOML(data: string): Lists {
   const lists: Lists = parse(data) as Lists;
   lists.lists.map((list: List) => {
     list.feeds.map((feed: Feed) => {
-      feed.xmlUrl = new URL(feed.xmlUrl);
+      feed.rssUrl = new URL(feed.rssUrl as URL);
+      feed.xmlUrl = transcodeXmlUrl(feed.type, feed.rssUrl, feed.id);
     });
   });
   return lists;
@@ -18,7 +20,7 @@ export function convertToOPML(list: List): string {
       return {
         "@title": feed.title,
         "@text": feed.title,
-        "@xmlUrl": feed.xmlUrl,
+        "@xmlUrl": transcodeXmlUrl(feed.type, feed.rssUrl, feed.id),
         "@type": "rss",
       };
     }),

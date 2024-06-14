@@ -3,18 +3,30 @@ name = "list 1"
 
 [[lists.feeds]]
 title = "feed 1"
-xmlUrl = "https://feed1.com/rss"
+type = "rss"
+rssUrl = "https://feed1.com/rss"
 [[lists.feeds]]
 title = "feed 2"
-xmlUrl = "https://feed2.com/rss"
+type = "rss"
+rssUrl = "https://feed2.com/rss"
 
 
 [[lists]]
 name = "list 2"
 
 [[lists.feeds]]
-title = "feed 1"
-xmlUrl = "https://feed1.com/rss"
+title = "bluesky"
+type = "bluesky"
+id = "username"
 [[lists.feeds]]
-title = "feed 2"
-xmlUrl = "https://feed2.com/rss"
+title = "note"
+type = "note"
+id = "username"
+[[lists.feeds]]
+title = "reddit"
+type = "reddit"
+id = "subreddit-name"
+[[lists.feeds]]
+title = "sizu.me"
+type = "sizu.me"
+id = "username"
