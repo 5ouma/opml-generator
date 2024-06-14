@@ -9,7 +9,8 @@ name = "list name"
 
 [[lists.feeds]]
 title = "feed title"
-xmlUrl = "https://example.com/feed"
+type = "rss"
+rssUrl = "https://example.com/feed"
 `;
 
   const feeds: Lists = {
@@ -19,6 +20,8 @@ xmlUrl = "https://example.com/feed"
         feeds: [
           {
             title: "feed title",
+            type: "rss",
+            rssUrl: new URL("https://example.com/feed"),
             xmlUrl: new URL("https://example.com/feed"),
           },
         ],
@@ -44,7 +47,8 @@ Deno.test("Convert Lists to OPML", () => {
     feeds: [
       {
         title: "feed title",
-        xmlUrl: new URL("https://example.com/feed"),
+        type: "rss",
+        rssUrl: new URL("https://example.com/feed"),
       },
     ],
   };

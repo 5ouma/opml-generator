@@ -7,7 +7,9 @@ export function convertFromTOML(data: string): Lists {
   const lists: Lists = parse(data) as Lists;
   lists.lists.map((list: List) => {
     list.feeds.map((feed: Feed) => {
-      feed.rssUrl = new URL(feed.rssUrl as URL);
+      if (feed.rssUrl) {
+        feed.rssUrl = new URL(feed.rssUrl as URL);
+      }
       feed.xmlUrl = transcodeXmlUrl(feed.type, feed.rssUrl, feed.id);
     });
   });
