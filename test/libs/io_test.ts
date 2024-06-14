@@ -1,7 +1,7 @@
 import { assertEquals, assertIsError } from "@std/assert";
 import { join } from "@std/path";
 import { readTOML, writeXML } from "../../src/libs/io.ts";
-import { convertToOPML, convertToTOML } from "../../src/libs/convert.ts";
+import { convertFromTOML, convertToOPML } from "../../src/libs/convert.ts";
 import type { Lists } from "../../src/types/mod.ts";
 
 Deno.test("Read TOML", async () => {
@@ -18,7 +18,7 @@ xmlUrl = "https://example.com/feed"
   await Deno.writeTextFile(file, toml);
   const lists: Lists = await readTOML(file);
 
-  assertEquals(convertToTOML(toml), lists);
+  assertEquals(convertFromTOML(toml), lists);
 });
 
 Deno.test("Read TOML (File not found)", async () => {
@@ -55,7 +55,6 @@ Deno.test("Write XML", async () => {
         feeds: [
           {
             title: "feed title",
-            text: "feed title",
             xmlUrl: new URL("https://example.com/feed"),
           },
         ],

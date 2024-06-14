@@ -7,6 +7,7 @@ export type List = {
 };
 export type Feed = {
   title: string;
-  text: string;
-  xmlUrl: URL;
+  type?: string;
+  id?: string;
+  xmlUrl?: URL;
 };
