@@ -1,4 +1,4 @@
-feeds.toml
-outputs/
+/feeds.toml
+/outputs/
 /coverage
 /coverage.lcov

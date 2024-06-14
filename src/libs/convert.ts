@@ -10,7 +10,12 @@ export function convertFromTOML(data: string): Lists {
       if (feed.rssUrl) {
         feed.rssUrl = new URL(feed.rssUrl as URL);
       }
-      feed.xmlUrl = transcodeXmlUrl(feed.type, feed.rssUrl, feed.id);
+      feed.xmlUrl = transcodeXmlUrl(
+        feed.title,
+        feed.type,
+        feed.rssUrl,
+        feed.id,
+      );
     });
   });
   return lists;
@@ -22,7 +27,7 @@ export function convertToOPML(list: List): string {
       return {
         "@title": feed.title,
         "@text": feed.title,
-        "@xmlUrl": transcodeXmlUrl(feed.type, feed.rssUrl, feed.id),
+        "@xmlUrl": transcodeXmlUrl(feed.title, feed.type, feed.rssUrl, feed.id),
         "@type": "rss",
       };
     }),

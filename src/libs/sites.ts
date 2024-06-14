@@ -7,11 +7,29 @@ const sites: site[] = [
   { type: "sizu.me", url: new URL("https://sizu.me/{id}/rss") },
 ];
 
-export function transcodeXmlUrl(type: string, rssUrl?: URL, id?: string): URL {
+export function transcodeXmlUrl(
+  title: string,
+  type: string,
+  rssUrl?: URL,
+  id?: string,
+): URL {
   if (type === "rss") {
-    return new URL(rssUrl as URL);
+    try {
+      return new URL(rssUrl as URL);
+    } catch {
+      throw new Error(`Parameter not set: "rssUrl" of "${title}"`);
+    }
   } else {
-    const url: URL = sites.find((site: site) => site.type === type)?.url as URL;
+    if (!id) {
+      throw new Error(`Parameter not set: "id" of "${title}"`);
+    }
+
+    const url: URL | undefined = sites.find((site: site) => site.type === type)
+      ?.url;
+    if (!url) {
+      throw new Error(`Site not found: "${type}" of "${title}"`);
+    }
+
     return new URL(url.href.replace(encodeURI("{id}"), id as string));
   }
 }
