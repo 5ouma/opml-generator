@@ -2,7 +2,7 @@ import { stringify } from "@libs/xml";
 import { parse } from "@std/toml";
 import type { Feed, List, Lists, OPMLOutline } from "../types/mod.ts";
 
-export function convertToTOML(data: string): Lists {
+export function convertFromTOML(data: string): Lists {
   const lists: Lists = parse(data) as Lists;
   lists.lists.map((list: List) => {
     list.feeds.map((feed: Feed) => {

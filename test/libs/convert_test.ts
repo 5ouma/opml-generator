@@ -1,5 +1,5 @@
 import { assertEquals } from "@std/assert";
-import { convertToOPML, convertToTOML } from "../../src/libs/convert.ts";
+import { convertFromTOML, convertToOPML } from "../../src/libs/convert.ts";
 import type { List, Lists } from "../../src/types/mod.ts";
 
 Deno.test("Parse TOML", () => {
@@ -28,7 +28,7 @@ text = "feed title"
 xmlUrl = "https://example.com/feed"
 `;
 
-  assertEquals(convertToTOML(toml), feeds);
+  assertEquals(convertFromTOML(toml), feeds);
 });
 
 Deno.test("Convert Lists to OPML", () => {
