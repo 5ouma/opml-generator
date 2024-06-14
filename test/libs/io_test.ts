@@ -11,8 +11,7 @@ name = "list name"
 
 [[lists.feeds]]
 title = "feed title"
-type = "rss"
-rssUrl = "https://example.com/feed"
+xmlUrl = "https://example.com/feed"
 `;
 
   const file: string = await Deno.makeTempFile({ suffix: ".toml" });
@@ -56,8 +55,7 @@ Deno.test("Write XML", async () => {
         feeds: [
           {
             title: "feed title",
-            type: "rss",
-            rssUrl: new URL("https://example.com/feed"),
+            xmlUrl: new URL("https://example.com/feed"),
           },
         ],
       },

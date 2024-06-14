@@ -9,27 +9,15 @@ const sites: site[] = [
 
 export function transcodeXmlUrl(
   title: string,
-  type: string,
-  rssUrl?: URL,
-  id?: string,
+  type: string | undefined,
+  id: string | undefined,
 ): URL {
-  if (type === "rss") {
-    try {
-      return new URL(rssUrl as URL);
-    } catch {
-      throw new Error(`Parameter not set: "rssUrl" of "${title}"`);
-    }
-  } else {
-    if (!id) {
-      throw new Error(`Parameter not set: "id" of "${title}"`);
-    }
+  if (!type) throw new Error(`Parameter not set: "type" of "${title}"`);
+  if (!id) throw new Error(`Parameter not set: "id" of "${title}"`);
 
-    const url: URL | undefined = sites.find((site: site) => site.type === type)
-      ?.url;
-    if (!url) {
-      throw new Error(`Site not found: "${type}" of "${title}"`);
-    }
+  const url: URL | undefined = sites
+    .find((site: site) => site.type === type)?.url;
+  if (!url) throw new Error(`Site not found: "${type}" of "${title}"`);
 
-    return new URL(url.href.replace(encodeURI("{id}"), id as string));
-  }
+  return new URL(url.href.replace(encodeURI("{id}"), id));
 }

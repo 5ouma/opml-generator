@@ -3,12 +3,10 @@ name = "list 1"
 
 [[lists.feeds]]
 title = "feed 1"
-type = "rss"
-rssUrl = "https://feed1.com/rss"
+xmlUrl = "https://feed1.com/rss"
 [[lists.feeds]]
 title = "feed 2"
-type = "rss"
-rssUrl = "https://feed2.com/rss"
+xmlUrl = "https://feed2.com/rss"
 
 
 [[lists]]

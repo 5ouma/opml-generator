@@ -7,15 +7,9 @@ export function convertFromTOML(data: string): Lists {
   const lists: Lists = parse(data) as Lists;
   lists.lists.map((list: List) => {
     list.feeds.map((feed: Feed) => {
-      if (feed.rssUrl) {
-        feed.rssUrl = new URL(feed.rssUrl as URL);
-      }
-      feed.xmlUrl = transcodeXmlUrl(
-        feed.title,
-        feed.type,
-        feed.rssUrl,
-        feed.id,
-      );
+      feed.xmlUrl = feed.xmlUrl
+        ? new URL(feed.xmlUrl)
+        : transcodeXmlUrl(feed.title, feed.type, feed.id);
     });
   });
   return lists;
@@ -27,7 +21,9 @@ export function convertToOPML(list: List): string {
       return {
         "@title": feed.title,
         "@text": feed.title,
-        "@xmlUrl": transcodeXmlUrl(feed.title, feed.type, feed.rssUrl, feed.id),
+        "@xmlUrl": feed.xmlUrl
+          ? new URL(feed.xmlUrl)
+          : transcodeXmlUrl(feed.title, feed.type, feed.id),
         "@type": "rss",
       };
     }),

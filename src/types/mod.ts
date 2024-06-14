@@ -1,3 +1,3 @@
 export * from "./opml.ts";
-export * from "./toml.ts";
+export * from "./feed.ts";
 export * from "./sites.ts";

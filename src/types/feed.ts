@@ -7,8 +7,7 @@ export type List = {
 };
 export type Feed = {
   title: string;
-  type: string;
+  type?: string;
   id?: string;
-  rssUrl?: URL;
   xmlUrl?: URL;
 };
