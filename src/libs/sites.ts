@@ -12,12 +12,12 @@ export function transcodeXmlUrl(
   type: string | undefined,
   id: string | undefined,
 ): URL {
-  if (!type) throw new Error(`Parameter not set: "type" of "${title}"`);
-  if (!id) throw new Error(`Parameter not set: "id" of "${title}"`);
+  if (!type) throw new Error(`parameter not set: "type" of "${title}"`);
+  if (!id) throw new Error(`parameter not set: "id" of "${title}"`);
 
   const url: URL | undefined = sites
     .find((site: site) => site.type === type)?.url;
-  if (!url) throw new Error(`Site not found: "${type}" of "${title}"`);
+  if (!url) throw new Error(`site not found: "${type}" of "${title}"`);
 
   return new URL(url.href.replace(encodeURI("{id}"), id));
 }

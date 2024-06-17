@@ -4,8 +4,9 @@ import { readTOML, writeXML } from "../../src/libs/io.ts";
 import { convertFromTOML, convertToOPML } from "../../src/libs/convert.ts";
 import type { Lists } from "../../src/types/mod.ts";
 
-Deno.test("Read TOML", async () => {
-  const toml = `
+Deno.test("Read TOML", async (t: Deno.TestContext) => {
+  await t.step("normal", async () => {
+    const toml = `
 [[lists]]
 name = "list name"
 
@@ -14,52 +15,49 @@ title = "feed title"
 xmlUrl = "https://example.com/feed"
 `;
 
-  const file: string = await Deno.makeTempFile({ suffix: ".toml" });
-  await Deno.writeTextFile(file, toml);
-  const lists: Lists = await readTOML(file);
+    const file: string = await Deno.makeTempFile({ suffix: ".toml" });
+    await Deno.writeTextFile(file, toml);
+    const lists: Lists = await readTOML(file);
 
-  assertEquals(convertFromTOML(toml), lists);
-});
+    assertEquals(convertFromTOML(toml), lists);
+  });
 
-Deno.test("Read TOML (File not found)", async () => {
-  try {
-    await readTOML("file-not-found.toml");
-  } catch (error) {
-    assertEquals(error.message, 'File not found: "file-not-found.toml"');
-  }
-});
+  await t.step("file not found", async () => {
+    try {
+      await readTOML("file-not-found.toml");
+    } catch (error) {
+      assertEquals(error.message, 'file not found: "file-not-found.toml"');
+    }
+  });
 
-Deno.test("Read TOML (Permission denied)", async () => {
-  const file: string = await Deno.makeTempFile({ suffix: ".toml" });
-  await Deno.chmod(file, 0o000);
-  try {
-    await readTOML(file);
-  } catch (error) {
-    assertEquals(error.message, `Permission denied: "${file}"`);
-  }
-});
+  await t.step("permission denied", async () => {
+    const file: string = await Deno.makeTempFile({ suffix: ".toml" });
+    await Deno.chmod(file, 0o000);
+    try {
+      await readTOML(file);
+    } catch (error) {
+      assertEquals(error.message, `permission denied: "${file}"`);
+    }
+  });
 
-Deno.test("Read TOML (Unexpected error)", async () => {
-  try {
-    await readTOML("");
-  } catch (error) {
-    assertIsError(error);
-  }
+  await t.step("unexpected error", async () => {
+    try {
+      await readTOML("");
+    } catch (error) {
+      assertIsError(error);
+    }
+  });
 });
 
 Deno.test("Write XML", async () => {
   const feeds: Lists = {
-    lists: [
-      {
-        name: "list name",
-        feeds: [
-          {
-            title: "feed title",
-            xmlUrl: new URL("https://example.com/feed"),
-          },
-        ],
-      },
-    ],
+    lists: [{
+      name: "list name",
+      feeds: [{
+        title: "feed title",
+        xmlUrl: new URL("https://example.com/feed"),
+      }],
+    }],
   };
 
   const dir: string = await Deno.makeTempDir();
