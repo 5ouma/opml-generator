@@ -9,9 +9,9 @@ export async function readTOML(file: string): Promise<Lists> {
     return convertFromTOML(data);
   } catch (error) {
     if (error instanceof Deno.errors.NotFound) {
-      throw new Error(`File not found: "${file}"`);
+      throw new Error(`file not found: "${file}"`);
     } else if (error instanceof Deno.errors.PermissionDenied) {
-      throw new Error(`Permission denied: "${file}"`);
+      throw new Error(`permission denied: "${file}"`);
     } else throw error;
   }
 }
