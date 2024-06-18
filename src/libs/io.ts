@@ -1,7 +1,7 @@
 import { paramCase } from "@wok/case";
 import { format } from "@std/path";
 import { convertFromTOML, convertToOPML } from "./convert.ts";
-import type { List, Lists } from "../types/mod.ts";
+import type { List, Lists } from "@5ouma/opml-generator/types";
 
 export async function readTOML(file: string): Promise<Lists> {
   try {

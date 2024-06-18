@@ -1,4 +1,4 @@
-import type { site } from "../types/mod.ts";
+import type { site } from "@5ouma/opml-generator/types";
 
 const sites: site[] = [
   { type: "bluesky", url: new URL("https://bsky.app/profile/{id}/rss") },

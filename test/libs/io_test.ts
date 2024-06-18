@@ -1,8 +1,8 @@
 import { assertEquals, assertIsError } from "@std/assert";
 import { join } from "@std/path";
-import { readTOML, writeXML } from "../../src/libs/io.ts";
+import { readTOML, writeXML } from "@5ouma/opml-generator/libs";
 import { convertFromTOML, convertToOPML } from "../../src/libs/convert.ts";
-import type { Lists } from "../../src/types/mod.ts";
+import type { Lists } from "@5ouma/opml-generator/types";
 
 Deno.test("Read TOML", async (t: Deno.TestContext) => {
   await t.step("normal", async () => {
