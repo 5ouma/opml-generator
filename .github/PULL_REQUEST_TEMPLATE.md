@@ -6,13 +6,6 @@ close #
 
 <br />
 
-### ✔︎ Checklists
-
-- [ ] This Pull Request introduces a new feature.
-- [ ] This Pull Request fixes a bug.
-
-<br />
-
 ### 🔄 Type of the Change
 
 - [ ] 🎉 Feature
