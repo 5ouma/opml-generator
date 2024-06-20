@@ -1,6 +1,6 @@
 import { assertEquals } from "@std/assert";
 import { transcodeXmlUrl } from "../../src/libs/sites.ts";
-import type { Feed } from "../../src/types/mod.ts";
+import type { Feed } from "@5ouma/opml-generator/types";
 
 Deno.test("Get XML URL", async (t: Deno.TestContext) => {
   await t.step("site", () => {

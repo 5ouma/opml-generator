@@ -1,7 +1,12 @@
 import { stringify } from "@libs/xml";
 import { parse } from "@std/toml";
 import { transcodeXmlUrl } from "./sites.ts";
-import type { Feed, List, Lists, OPMLOutline } from "../types/mod.ts";
+import type {
+  Feed,
+  List,
+  Lists,
+  OPMLOutline,
+} from "@5ouma/opml-generator/types";
 
 export function convertFromTOML(data: string): Lists {
   const lists: Lists = parse(data) as Lists;

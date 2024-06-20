@@ -1,6 +1,6 @@
 import { assertEquals } from "@std/assert";
 import { convertFromTOML, convertToOPML } from "../../src/libs/convert.ts";
-import type { List, Lists } from "../../src/types/mod.ts";
+import type { List, Lists } from "@5ouma/opml-generator/types";
 
 Deno.test("Parse TOML", async (t: Deno.TestContext) => {
   await t.step("rss", () => {
