@@ -15,6 +15,8 @@ changelog:
       labels: ["🛡️ Security"]
     - title: 📖 Documentation Changes
       labels: ["📖 Documentation"]
+    - title: 🏎️ Performance Improvements
+      labels: ["🏎️ Performance"]
     - title: 🧹 Refactoring
       labels: ["🧹 Refactoring"]
     - title: 🧪 Testing

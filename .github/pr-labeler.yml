@@ -11,6 +11,8 @@ customLabels:
     label: "🛡️ Security"
   - text: "- [x] 📖 Documentation"
     label: "📖 Documentation"
+  - text: "- [x] 🏎️ Performance"
+    label: "🏎️ Performance"
   - text: "- [x] 🧹 Refactoring"
     label: "🧹 Refactoring"
   - text: "- [x] 🧪 Testing"

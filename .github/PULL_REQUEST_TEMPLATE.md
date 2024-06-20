@@ -12,6 +12,7 @@ close #
 - [ ] 🧰 Bug
 - [ ] 🛡️ Security
 - [ ] 📖 Documentation
+- [ ] 🏎️ Performance
 - [ ] 🧹 Refactoring
 - [ ] 🧪 Testing
 - [ ] 🔧 Maintenance
