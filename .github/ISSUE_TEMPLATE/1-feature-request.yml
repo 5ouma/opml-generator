@@ -1,6 +1,6 @@
 name: 🎉 Feature Request
 description: Request a new feature or enhancement to an existing feature
-labels: ["Type: Feature"]
+labels: ["🎉 New Feature"]
 body:
   - type: textarea
     id: feature-description

@@ -1,30 +1,31 @@
 changelog:
   exclude:
     labels:
-      - "Type: Meta"
-      - "Type: Question"
-      - "Type: Release"
+      - "🧠 Meta"
+      - "🚀 Release"
 
   categories:
-    - title: 🧨 Breaking Changes
-      labels: ["Type: Breaking Change"]
-    - title: 🎉 New Features
-      labels: ["Type: Feature"]
-    - title: 🧰 Bug Fixes
-      labels: ["Type: Bug"]
-    - title: 🛡️ Security Fixes
-      labels: ["Type: Security"]
-    - title: 📖 Documentation Changes
-      labels: ["Type: Documentation"]
-    - title: 🧹 Refactoring
-      labels: ["Type: Refactoring"]
-    - title: 🧪 Testing
-      labels: ["Type: Testing"]
-    - title: 🔧 Maintenance
-      labels: ["Type: Maintenance"]
-    - title: 🎽 CI
-      labels: ["Type: CI"]
-    - title: ⛓️ Dependency Updates
-      labels: ["Type: Dependencies", "dependencies"]
-    - title: 🔍 Other Changes
+    - title: "🧨 Breaking Changes"
+      labels: ["🧨 Breaking Change"]
+    - title: "🎉 New Features"
+      labels: ["🎉 New Feature"]
+    - title: "🧰 Bug Fixes"
+      labels: ["🧰 Bug"]
+    - title: "🛡️ Security Fixes"
+      labels: ["🛡️ Security"]
+    - title: "📖 Documentation Changes"
+      labels: ["📖 Documentation"]
+    - title: "🏎️ Performance Improvements"
+      labels: ["🏎️ Performance"]
+    - title: "🧹 Refactoring"
+      labels: ["🧹 Refactoring"]
+    - title: "🧪 Testing"
+      labels: ["🧪 Testing"]
+    - title: "🔧 Maintenance"
+      labels: ["🔧 Maintenance"]
+    - title: "🎽 CI"
+      labels: ["🎽 CI"]
+    - title: "⛓️ Dependency Updates"
+      labels: ["⛓️ Dependencies", "dependencies"]
+    - title: "🔍 Other Changes"
       labels: ["*"]
