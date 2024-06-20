@@ -8,7 +8,7 @@ close #
 
 ### 🔄 Type of the Change
 
-- [ ] 🎉 Feature
+- [ ] 🎉 New Feature
 - [ ] 🧰 Bug
 - [ ] 🛡️ Security
 - [ ] 📖 Documentation
