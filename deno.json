@@ -3,8 +3,8 @@
   "fmt": { "exclude": ["LICENSE", ".github/**/*.md"] },
   "test": { "include": ["src/", "test/"] },
   "tasks": {
-    "gen": "deno run --allow-read --allow-write ./src/main.ts",
-    "test": "deno test --allow-read --allow-write --parallel --shuffle",
+    "gen": "deno run --allow-env --allow-read --allow-write ./src/main.ts",
+    "test": "deno test --allow-env --allow-read --allow-write --parallel --shuffle",
     "cov": "deno task test --coverage && deno coverage --lcov > coverage.lcov"
   },
   "imports": {
@@ -15,6 +15,7 @@
     "@std/cli": "jsr:@std/cli@0.224.6",
     "@std/path": "jsr:@std/path@0.225.2",
     "@std/toml": "jsr:@std/toml@0.224.1",
+    "@std/url": "jsr:@std/url@0.224.1",
     "@wok/case": "jsr:@wok/case@1.0.1"
   }
 }
