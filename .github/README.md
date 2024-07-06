@@ -33,13 +33,17 @@ OPML Generator has 2 ways to convert TOML to OPML.
    git clone https://github.com/5ouma/opml-generator.git
    ```
 
-3. Run Deno Task
+3. Set the environment variables if you prefer
+
+   > [🌍 Environment Variables](#-environment-variables)
+
+4. Run Deno Task
 
    ```shell
    deno task gen
    ```
 
-4. Outputs are stored in the `outputs` directory separated by `lists`
+5. Outputs are stored in the `outputs` directory separated by `lists`
 
 <br />
 
@@ -50,23 +54,31 @@ OPML Generator has 2 ways to convert TOML to OPML.
    - includes [`feeds.toml`](./assets/example/feeds.toml)
    - for outputs
 
-2. Create [a Personal Access Token] with the `Gist` permission
+2. [Fork this repository](https://github.com/5ouma/opml-generator/fork)
 
-3. [Fork this repository](https://github.com/5ouma/opml-generator/fork)
+3. Add Actions secrets
+   from `Settings > Secrets and variables | Actions` in the sidebar
 
-4. Add Actions secrets
-   from `Settings > Secrets and variables | Actions` in the sidebar:
+   > [🌍 Environment Variables](#-environment-variables)
 
-   - `TOML_GIST_ID`: Gist ID for [`feeds.toml`](./assets/example/feeds.toml)
-   - `OPML_GIST_ID`: Gist ID for outputs
-   - `TOKEN`: Personal Access Token
-
-5. Enable GitHub Actions by checking `Allow all actions and reusable workflows`
+4. Enable GitHub Actions by checking `Allow all actions and reusable workflows`
    from `Settings > Actions | General` in the sidebar
 
 🎉 Automatically update every 0 a.m. UTC
 
-[a Personal Access Token]: https://github.com/settings/tokens
+<br /><br />
+
+## 🌍 Environment Variables
+
+|      Name       |        Description         | GitHub Actions only |
+| :-------------: | :------------------------: | :-----------------: |
+| `TOML_GIST_ID`  | Gist ID for [`feeds.toml`] |        true         |
+| `OPML_GIST_ID`  |    Gist ID for outputs     |        true         |
+|     `TOKEN`     |  [Personal Access Token]   |        true         |
+| `NITTER_DOMAIN` |     Nitter RSS domain      |        false        |
+
+[`feeds.toml`]: ./assets/example/feeds.toml
+[Personal Access Token]: https://github.com/settings/tokens/new?description=OPML%20Generator&scopes=gist
 
 <br /><br />
 

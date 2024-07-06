@@ -17,6 +17,10 @@ title = "bluesky"
 type = "bluesky"
 id = "username"
 [[lists.feeds]]
+title = "nitter"
+type = "nitter"
+id = "example tweet search"
+[[lists.feeds]]
 title = "note"
 type = "note"
 id = "username"
@@ -27,4 +31,8 @@ id = "subreddit-name"
 [[lists.feeds]]
 title = "sizu.me"
 type = "sizu.me"
+id = "username"
+[[lists.feeds]]
+title = "zenn"
+type = "zenn"
 id = "username"
