@@ -10,7 +10,9 @@
       "jsr:@std/collections@^1.0.0-rc.1": "jsr:@std/collections@1.0.0-rc.1",
       "jsr:@std/internal@^1.0.0": "jsr:@std/internal@1.0.0",
       "jsr:@std/path@0.225.2": "jsr:@std/path@0.225.2",
+      "jsr:@std/path@1.0.0-rc.1": "jsr:@std/path@1.0.0-rc.1",
       "jsr:@std/toml@0.224.1": "jsr:@std/toml@0.224.1",
+      "jsr:@std/url@0.224.1": "jsr:@std/url@0.224.1",
       "jsr:@wok/case@1.0.1": "jsr:@wok/case@1.0.1"
     },
     "jsr": {
@@ -44,10 +46,19 @@
           "jsr:@std/assert@^0.226.0"
         ]
       },
+      "@std/path@1.0.0-rc.1": {
+        "integrity": "b8c00ae2f19106a6bb7cbf1ab9be52aa70de1605daeb2dbdc4f87a7cbaf10ff6"
+      },
       "@std/toml@0.224.1": {
         "integrity": "c364b9ca3b18207223c4e2a1f652ef2970ff80967f7575ddf89b6b0565a17148",
         "dependencies": [
           "jsr:@std/collections@^1.0.0-rc.1"
+        ]
+      },
+      "@std/url@0.224.1": {
+        "integrity": "19f0e1c6ff8fc2ef9522a746595c24f53be47425daa910eb8ef39cbb5e00b3df",
+        "dependencies": [
+          "jsr:@std/path@1.0.0-rc.1"
         ]
       },
       "@wok/case@1.0.1": {
@@ -63,6 +74,7 @@
       "jsr:@std/cli@0.224.6",
       "jsr:@std/path@0.225.2",
       "jsr:@std/toml@0.224.1",
+      "jsr:@std/url@0.224.1",
       "jsr:@wok/case@1.0.1"
     ]
   }
