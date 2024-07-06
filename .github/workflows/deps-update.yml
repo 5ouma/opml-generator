@@ -26,3 +26,4 @@ jobs:
           base: dev
           branch: deps-deno
           commit-prefix: "chore(deps):"
+          labels:
