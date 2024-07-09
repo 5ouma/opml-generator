@@ -30,6 +30,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
         run: |
+          git -C 'outputs' add -AN
           while read -r file; do
             gh gist edit ${{ secrets.OPML_GIST_ID }} "./outputs/$file" -a "./outputs/$file"
           done < <(git -C 'outputs' diff --name-only HEAD)
