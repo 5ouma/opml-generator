@@ -1,2 +1,2 @@
-preferredBranch: "dev"
-exclude: [branch: "dev"]
+preferredBranch: dev
+exclude: [branch: dev]

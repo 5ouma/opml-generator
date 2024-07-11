@@ -3,7 +3,7 @@ ci:
     chore(fix): Auto fixes from pre-commit.com hooks
 
     For more information, see https://pre-commit.ci.
-  autoupdate_branch: "dev"
+  autoupdate_branch: dev
   autoupdate_commit_msg: "chore(deps): Bump pre-commit hook"
 
 repos:
@@ -41,10 +41,10 @@ repos:
     rev: v0.41.0
     hooks:
       - id: markdownlint-fix
-        args: ["--disable", "MD013", "MD023", "MD024", "MD033", "MD036"]
+        args: [--disable, "MD013", "MD023", "MD024", "MD033", "MD036"]
 
   - repo: https://github.com/koalaman/shellcheck-precommit
     rev: v0.10.0
     hooks:
       - id: shellcheck
-        args: ["-e", "SC1071,SC1072,SC1073,SC1090,SC1091,SC2015,SC2148,SC2154"]
+        args: [-e, "SC1071,SC1072,SC1073,SC1090,SC1091,SC2015,SC2148,SC2154"]
