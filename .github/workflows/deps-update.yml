@@ -20,7 +20,7 @@ jobs:
           ref: dev
 
       - name: 🦕 Update Dependencies
-        uses: hasundue/molt-action@0c144e6a05495a8186c4ef4c5e9a51d8e6b751c7 # v1.0.0-rc.4
+        uses: hasundue/molt-action@0c144e6a05495a8186c4ef4c5e9a51d8e6b751c7 # v1.0.1
         with:
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           base: dev
