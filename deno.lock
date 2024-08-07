@@ -2,7 +2,7 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "jsr:@libs/typing@2": "jsr:@libs/typing@2.1.1",
+      "jsr:@libs/typing@2": "jsr:@libs/typing@2.8.1",
       "jsr:@libs/xml@5.4.7": "jsr:@libs/xml@5.4.7",
       "jsr:@std/assert@0.226.0": "jsr:@std/assert@0.226.0",
       "jsr:@std/assert@^0.226.0": "jsr:@std/assert@0.226.0",
@@ -18,6 +18,9 @@
     "jsr": {
       "@libs/typing@2.1.1": {
         "integrity": "964e61860716140671718b170d8de4a8705e05d86e7ed0c41883fe2687c91c80"
+      },
+      "@libs/typing@2.8.1": {
+        "integrity": "08437a01ec51f74a20a5ab5d683475025f93a2ad641d2394a97e87f7b5194d78"
       },
       "@libs/xml@5.4.7": {
         "integrity": "6a5ccb4ae832cbb6947e8cb73eaf41eeb38dabbf68e041252055a2d5233afca7",

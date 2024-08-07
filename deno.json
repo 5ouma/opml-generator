@@ -10,7 +10,7 @@
   "imports": {
     "@5ouma/opml-generator/libs": "./src/libs/mod.ts",
     "@5ouma/opml-generator/types": "./src/types/mod.ts",
-    "@libs/xml": "jsr:@libs/xml@5.4.7",
+    "@libs/xml": "jsr:@libs/xml@5.4.13",
     "@std/assert": "jsr:@std/assert@0.226.0",
     "@std/cli": "jsr:@std/cli@0.224.6",
     "@std/path": "jsr:@std/path@0.225.2",
