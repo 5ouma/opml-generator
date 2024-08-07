@@ -12,7 +12,7 @@
     "@5ouma/opml-generator/types": "./src/types/mod.ts",
     "@libs/xml": "jsr:@libs/xml@5.4.13",
     "@std/assert": "jsr:@std/assert@1.0.2",
-    "@std/cli": "jsr:@std/cli@0.224.6",
+    "@std/cli": "jsr:@std/cli@1.0.3",
     "@std/path": "jsr:@std/path@0.225.2",
     "@std/toml": "jsr:@std/toml@0.224.1",
     "@std/url": "jsr:@std/url@0.224.1",
