@@ -13,3 +13,10 @@ export type Feed = {
   id?: string;
   xmlUrl?: URL;
 };
+
+export type OPMLOutline = {
+  "@title": string;
+  "@text": string;
+  "@xmlUrl": URL;
+  "@type": "rss";
+};
