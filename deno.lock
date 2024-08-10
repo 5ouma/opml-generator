@@ -11,7 +11,6 @@
       "jsr:@std/path@1.0.2": "jsr:@std/path@1.0.2",
       "jsr:@std/path@^1.0.2": "jsr:@std/path@1.0.2",
       "jsr:@std/toml@1.0.0": "jsr:@std/toml@1.0.0",
-      "jsr:@std/url@0.225.0": "jsr:@std/url@0.225.0",
       "jsr:@wok/case@1.0.1": "jsr:@wok/case@1.0.1"
     },
     "jsr": {
@@ -48,12 +47,6 @@
           "jsr:@std/collections@^1.0.4"
         ]
       },
-      "@std/url@0.225.0": {
-        "integrity": "fc854cc8a720e9c974904071140b462880d8347030006f43193935ae06c7a0f9",
-        "dependencies": [
-          "jsr:@std/path@^1.0.2"
-        ]
-      },
       "@wok/case@1.0.1": {
         "integrity": "409e94f961f5b278992bace87a0c7d3c6a3db516d01759bdb827d9ae4d75e9aa"
       }
@@ -67,7 +60,6 @@
       "jsr:@std/cli@1.0.3",
       "jsr:@std/path@1.0.2",
       "jsr:@std/toml@1.0.0",
-      "jsr:@std/url@0.225.0",
       "jsr:@wok/case@1.0.1"
     ]
   }
