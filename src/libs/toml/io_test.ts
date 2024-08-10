@@ -1,8 +1,6 @@
 import { assertEquals, assertIsError } from "@std/assert";
-import { join } from "@std/path";
-import { readTOML, writeXML } from "@5ouma/opml-generator/libs";
-import { convertFromTOML, convertToOPML } from "../../src/libs/convert.ts";
-import type { Lists } from "@5ouma/opml-generator/types";
+import { readTOML } from "./io.ts";
+import type { Lists } from "../types.ts";
 
 Deno.test("Read TOML", async (t: Deno.TestContext) => {
   await t.step("normal", async () => {
@@ -15,11 +13,20 @@ title = "feed title"
 xmlUrl = "https://example.com/feed"
 `;
 
+    const lists: Lists = {
+      lists: [{
+        name: "list name",
+        feeds: [{
+          title: "feed title",
+          xmlUrl: new URL("https://example.com/feed"),
+        }],
+      }],
+    };
+
     const file: string = await Deno.makeTempFile({ suffix: ".toml" });
     await Deno.writeTextFile(file, toml);
-    const lists: Lists = await readTOML(file);
 
-    assertEquals(convertFromTOML(toml), lists);
+    assertEquals(await readTOML(file), lists);
   });
 
   await t.step("file not found", async () => {
@@ -47,22 +54,4 @@ xmlUrl = "https://example.com/feed"
       assertIsError(error);
     }
   });
-});
-
-Deno.test("Write XML", async () => {
-  const feeds: Lists = {
-    lists: [{
-      name: "list name",
-      feeds: [{
-        title: "feed title",
-        xmlUrl: new URL("https://example.com/feed"),
-      }],
-    }],
-  };
-
-  const dir: string = await Deno.makeTempDir();
-  await writeXML(feeds, dir);
-  const data: string = await Deno.readTextFile(join(dir, "list-name.xml"));
-
-  assertEquals(convertToOPML(feeds.lists[0]), data);
 });

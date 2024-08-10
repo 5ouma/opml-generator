@@ -1,7 +1,6 @@
 import { parseArgs } from "@std/cli";
 import { basename, resolve } from "@std/path";
-import { readTOML, writeXML } from "@5ouma/opml-generator/libs";
-import type { Lists } from "@5ouma/opml-generator/types";
+import { type Lists, readTOML, writeXML } from "./libs/mod.ts";
 
 const flags = parseArgs(Deno.args, {
   string: ["feeds", "output"],

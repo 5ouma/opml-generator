@@ -1,13 +1,16 @@
-import { join } from "@std/url";
-import type { site } from "@5ouma/opml-generator/types";
+type site = {
+  type: string;
+  url: URL;
+};
 
 const sites: site[] = [
   { type: "bluesky", url: new URL("https://bsky.app/profile/{id}/rss") },
   {
     type: "nitter",
-    url: join(
-      new URL(`https://${Deno.env.get("NITTER_DOMAIN") ?? "cdn.xcancel.com"}`),
-      "/search/rss?f=tweets&q={id}",
+    url: new URL(
+      `https://${
+        Deno.env.get("NITTER_DOMAIN") ?? "cdn.xcancel.com"
+      }/search/rss?f=tweets&q={id}`,
     ),
   },
   { type: "note", url: new URL("https://note.com/{id}/rss") },
