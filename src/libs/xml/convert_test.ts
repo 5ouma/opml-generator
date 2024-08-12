@@ -1,6 +1,8 @@
 import { assertEquals } from "@std/assert";
+
 import { convert } from "./convert.ts";
 import type { List } from "../types.ts";
+
 Deno.test("Convert Lists to OPML", async (t: Deno.TestContext) => {
   await t.step("rss", () => {
     const xml = `\
