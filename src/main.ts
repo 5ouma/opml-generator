@@ -1,5 +1,6 @@
 import { parseArgs } from "@std/cli";
 import { basename, resolve } from "@std/path";
+
 import { type Lists, readTOML, writeXML } from "./libs/mod.ts";
 
 const flags = parseArgs(Deno.args, {
