@@ -1,6 +1,26 @@
+/**
+ * Read TOML file and convert to Lists.
+ * @module
+ */
+
 import { convert } from "./convert.ts";
 import type { Lists } from "../types.ts";
 
+/**
+ * Read TOML file and convert to Lists.
+ *
+ * @param file The TOML file to convert
+ * @returns The converted lists
+ * @see {@link Lists}
+ * @throws Deno.errors.NotFound
+ * @throws Deno.errors.PermissionDenied
+ * @throws Error
+ *
+ * @example
+ * ```ts
+ * const lists: Lists = await read("lists.toml");
+ * ```
+ */
 export async function read(file: string): Promise<Lists> {
   try {
     const data: string = await Deno.readTextFile(file);
