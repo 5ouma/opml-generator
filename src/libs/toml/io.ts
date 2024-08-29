@@ -1,7 +1,7 @@
 import { convert } from "./convert.ts";
 import type { Lists } from "../types.ts";
 
-export async function readTOML(file: string): Promise<Lists> {
+export async function read(file: string): Promise<Lists> {
   try {
     const data: string = await Deno.readTextFile(file);
     return convert(data);

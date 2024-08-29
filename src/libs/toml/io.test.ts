@@ -1,6 +1,6 @@
 import { assertEquals, assertIsError } from "@std/assert";
 
-import { readTOML } from "./io.ts";
+import { read } from "./io.ts";
 import type { Lists } from "../types.ts";
 
 Deno.test("Read TOML", async (t: Deno.TestContext) => {
@@ -27,12 +27,12 @@ xmlUrl = "https://example.com/feed"
     const file: string = await Deno.makeTempFile({ suffix: ".toml" });
     await Deno.writeTextFile(file, toml);
 
-    assertEquals(await readTOML(file), lists);
+    assertEquals(await read(file), lists);
   });
 
   await t.step("file not found", async () => {
     try {
-      await readTOML("file-not-found.toml");
+      await read("file-not-found.toml");
     } catch (error) {
       assertEquals(error.message, 'file not found: "file-not-found.toml"');
     }
@@ -42,7 +42,7 @@ xmlUrl = "https://example.com/feed"
     const file: string = await Deno.makeTempFile({ suffix: ".toml" });
     await Deno.chmod(file, 0o000);
     try {
-      await readTOML(file);
+      await read(file);
     } catch (error) {
       assertEquals(error.message, `permission denied: "${file}"`);
     }
@@ -50,7 +50,7 @@ xmlUrl = "https://example.com/feed"
 
   await t.step("unexpected error", async () => {
     try {
-      await readTOML("");
+      await read("");
     } catch (error) {
       assertIsError(error);
     }
