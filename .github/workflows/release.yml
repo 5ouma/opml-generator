@@ -37,6 +37,8 @@ jobs:
       - name: 🚀 Rrelease a New Version
         if: ${{ steps.version-has-changed.outputs.stop != 'true' }}
         run: gh release create "v${{ steps.version.outputs.prop }}" --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: ⬆️ Publish to JSR
         if: ${{ steps.version-has-changed.outputs.stop != 'true' }}
