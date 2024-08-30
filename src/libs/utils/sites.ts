@@ -3,6 +3,19 @@ type site = {
   url: URL;
 };
 
+/**
+ * The array of site URLs.
+ *
+ * @property site.type The site name
+ * @property site.url The site URL
+ *
+ * @example
+ * ```ts
+ * const sites: sites = [
+ *   { type: "type", url: new URL("https://example.com/rss") }
+ * ];
+ * ```
+ */
 const sites: site[] = [
   { type: "bluesky", url: new URL("https://bsky.app/profile/id/rss") },
   {
@@ -19,6 +32,22 @@ const sites: site[] = [
   { type: "zenn", url: new URL("https://zenn.dev/id/feed") },
 ];
 
+/**
+ * Transcode URL by site type.
+ *
+ * @param title The site title
+ * @param type The site type
+ * @param id The ID to specify the content
+ * @returns The RSS URL
+ * @throws Parameter not set: "type" of "title"
+ * @throws Parameter not set: "id" of "title"
+ * @throws Site not found: "type" of "title"
+ *
+ * @example
+ * ```ts
+ * const url: URL = transcodeXmlUrl("title", "type", "id");
+ * ```
+ */
 export function transcodeXmlUrl(
   title: string,
   type: string | undefined,

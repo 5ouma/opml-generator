@@ -1,0 +1,43 @@
+name: 🚀 Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - deno.json
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  Release:
+    runs-on: Ubuntu-Latest
+
+    steps:
+      - name: 🚚 Checkout Repository
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
+      - name: 📦 Get the Package Version
+        uses: notiz-dev/github-action-json-property@a5a9c668b16513c737c3e1f8956772c99c73f6e8 # v0.2.0
+        id: version
+        with:
+          path: deno.json
+          prop_path: version
+
+      - name: 🔍 Detect the Version has Changed
+        id: version-has-changed
+        run: |
+          tag="$(git tag -l | sort -V | tail -n 1)"
+          if [[ "$tag" == "v${{ steps.version.outputs.prop }}" ]]; then
+            echo "stop=true" | tee -a "$GITHUB_OUTPUT"
+          fi
+
+      - name: 🚀 Rrelease a New Version
+        if: ${{ steps.version-has-changed.outputs.stop != 'true' }}
+        run: gh release create "v${{ steps.version.outputs.prop }}" --generate-notes
+
+      - name: ⬆️ Publish to JSR
+        if: ${{ steps.version-has-changed.outputs.stop != 'true' }}
+        run: npx jsr publish

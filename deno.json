@@ -1,8 +1,14 @@
 {
-  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
-  "fmt": { "exclude": ["LICENSE", ".github/**/*.md"] },
+  "name": "@5ouma/opml-generator",
+  "version": "1.0.0",
+  "exports": "./src/main.ts",
+  "publish": {
+    "include": ["LICENSE", "README.md", "deno.json", "src/"],
+    "exclude": ["**/*.test.ts"]
+  },
+  "fmt": { "exclude": ["LICENSE", "README.md", ".github/**/*.md"] },
   "tasks": {
-    "gen": "deno run --allow-env='NITTER_DOMAIN' --allow-read --allow-write ./src/main.ts",
+    "gen": "deno run --allow-env='NITTER_DOMAIN' --allow-read --allow-write src/main.ts",
     "test": "deno test --allow-env='NITTER_DOMAIN' --allow-read --allow-write --parallel --shuffle",
     "cov": "deno task test --coverage && deno coverage --lcov > coverage.lcov"
   },

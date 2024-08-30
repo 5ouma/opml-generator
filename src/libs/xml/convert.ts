@@ -3,6 +3,25 @@ import { stringify } from "@libs/xml";
 import { transcodeXmlUrl } from "../utils/sites.ts";
 import type { Feed, List, OPMLOutline } from "../types.ts";
 
+/**
+ * Convert Lists to OPML.
+ *
+ * @param list The feed list to convert
+ * @see {@link List}
+ * @returns The OPML stringified data
+ *
+ * @example
+ * ```ts
+ * const list: List = {
+ *   name: "list name",
+ *   feeds: [{
+ *     title: "feed title",
+ *     xmlUrl: "https://example.com/feed",
+ *   }],
+ * };
+ * const opml: string = convert(list);
+ * ```
+ */
 export function convert(list: List): string {
   const body = {
     outline: list.feeds.map((feed: Feed): OPMLOutline => {

@@ -10,7 +10,6 @@ I would recommend reading this guideline for a better development experience.
 <br />
 
 - [💬 Commit Message](#-commit-message)
-- [🎋 Pull Requests Branch](#-pull-requests-branch)
 - [❓ Pull Requests Title](#-pull-requests-title)
 - [🪵 Commit Log](#-commit-log)
 
@@ -30,35 +29,6 @@ Body
 
 <br />
 
-## 🎋 Pull Requests Branch
-
-I use the [`dev`] branch for the temporary merging.
-When it's time to release, I'll merge the [`dev`] branch into the [`main`] branch.
-<br />
-For this reason, please fork the [`dev`] branch and open a PR to it.
-
-[`main`]: https://github.com/5ouma/opml-generator/tree/main
-[`dev`]: https://github.com/5ouma/opml-generator/tree/dev
-
-```mermaid
-flowchart LR
-  subgraph PR Branches
-    feature1
-    feature2
-    feature3
-  end
-
-  subgraph  Origin Branches
-    dev
-    main
-  end
-
-  feature1 & feature2 & feature3 -- Squash Merge --> dev
-  dev -- Merge --> main
-```
-
-<br />
-
 ## ❓ Pull Requests Title
 
 You don't need to add any prefixes like `feature` or `bug fix`
@@ -70,5 +40,5 @@ Please give a clear title.
 
 ## 🪵 Commit Log
 
-I do squash merge to the dev branch to keep the commit history clean.
+I do squash merge to the main branch to keep the commit history clean.
 When merging your Pull Request, I'll add the Conventional Commits type and scope.

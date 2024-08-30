@@ -1,7 +1,7 @@
 import { assertEquals } from "@std/assert";
 import { join } from "@std/path";
 
-import { writeXML } from "./io.ts";
+import { write } from "./io.ts";
 import type { Lists } from "../types.ts";
 
 Deno.test("Write XML", async () => {
@@ -25,7 +25,7 @@ Deno.test("Write XML", async () => {
 `;
 
   const dir: string = await Deno.makeTempDir();
-  await writeXML(lists, dir);
+  await write(lists, dir);
 
   assertEquals(await Deno.readTextFile(join(dir, "list-name.xml")), xml);
 });

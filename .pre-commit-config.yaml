@@ -3,7 +3,6 @@ ci:
     chore(fix): Auto fixes from pre-commit.com hooks
 
     For more information, see https://pre-commit.ci.
-  autoupdate_branch: dev
   autoupdate_commit_msg: "chore(deps): Bump pre-commit hook"
 
 repos:
@@ -23,7 +22,7 @@ repos:
         args: [--whitespaces-count, "2"]
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.23.6
+    rev: v1.24.1
     hooks:
       - id: typos
 

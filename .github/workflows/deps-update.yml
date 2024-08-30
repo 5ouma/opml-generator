@@ -16,14 +16,11 @@ jobs:
     steps:
       - name: 🚚 Checkout Repository
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
-        with:
-          ref: dev
 
       - name: 🦕 Update Dependencies
         uses: hasundue/molt-action@2042116c4f16e14c08c98130f1470c19c5cbfd2f # v1.0.2
         with:
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          base: dev
           branch: deps-deno
           commit-prefix: "chore(deps):"
           labels:
