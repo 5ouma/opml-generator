@@ -19,28 +19,24 @@ jobs:
     steps:
       - name: 🚚 Checkout Repository
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
-
-      - name: 📦 Get the Package Version
-        uses: notiz-dev/github-action-json-property@a5a9c668b16513c737c3e1f8956772c99c73f6e8 # v0.2.0
-        id: version
         with:
-          path: deno.json
-          prop_path: version
+          fetch-depth: 0
 
-      - name: 🔍 Detect the Version has Changed
-        id: version-has-changed
+      - name: 🔍 Check the Version
+        id: version
         run: |
+          version="$(jq -r '.version' deno.json)"
           tag="$(git tag -l | sort -V | tail -n 1)"
-          if [[ "$tag" == "v${{ steps.version.outputs.prop }}" ]]; then
-            echo "stop=true" | tee -a "$GITHUB_OUTPUT"
+          if [[ "v$version" != "$tag" ]]; then
+            echo "next=v$version" >> "$GITHUB_OUTPUT"
           fi
 
       - name: 🚀 Rrelease a New Version
-        if: ${{ steps.version-has-changed.outputs.stop != 'true' }}
-        run: gh release create "v${{ steps.version.outputs.prop }}" --generate-notes
+        if: ${{ steps.version.outputs.next != '' }}
+        run: gh release create "${{ steps.version.outputs.next }}" --generate-notes
         env:
           GH_TOKEN: ${{ github.token }}
 
-      - name: ⬆️ Publish to JSR
-        if: ${{ steps.version-has-changed.outputs.stop != 'true' }}
+      - name: 📦 Publish to JSR
+        if: ${{ steps.version.outputs.next != '' }}
         run: npx jsr publish
