@@ -6,10 +6,10 @@
       "jsr:@libs/xml@5.4.14": "jsr:@libs/xml@5.4.14",
       "jsr:@std/assert@1.0.3": "jsr:@std/assert@1.0.3",
       "jsr:@std/cli@1.0.4": "jsr:@std/cli@1.0.4",
-      "jsr:@std/collections@^1.0.4": "jsr:@std/collections@1.0.5",
+      "jsr:@std/collections@^1.0.5": "jsr:@std/collections@1.0.5",
       "jsr:@std/internal@^1.0.2": "jsr:@std/internal@1.0.2",
       "jsr:@std/path@1.0.3": "jsr:@std/path@1.0.3",
-      "jsr:@std/toml@1.0.0": "jsr:@std/toml@1.0.0",
+      "jsr:@std/toml@1.0.1": "jsr:@std/toml@1.0.1",
       "jsr:@wok/case@1.0.1": "jsr:@wok/case@1.0.1"
     },
     "jsr": {
@@ -40,10 +40,10 @@
       "@std/path@1.0.3": {
         "integrity": "cd89d014ce7eb3742f2147b990f6753ee51d95276bfc211bc50c860c1bc7df6f"
       },
-      "@std/toml@1.0.0": {
-        "integrity": "c9e37564eedd84084871c66238e00196ec67aa958e09a7f761b3f36273a7a8a5",
+      "@std/toml@1.0.1": {
+        "integrity": "b55b407159930f338d384b1f8fd317c8e8a35e27ebb8946155f49e3a158d16c4",
         "dependencies": [
-          "jsr:@std/collections@^1.0.4"
+          "jsr:@std/collections@^1.0.5"
         ]
       },
       "@wok/case@1.0.1": {
@@ -58,7 +58,7 @@
       "jsr:@std/assert@1.0.3",
       "jsr:@std/cli@1.0.4",
       "jsr:@std/path@1.0.3",
-      "jsr:@std/toml@1.0.0",
+      "jsr:@std/toml@1.0.1",
       "jsr:@wok/case@1.0.1"
     ]
   }
