@@ -6,6 +6,7 @@
 
 [![GitHub Release](https://img.shields.io/github/v/release/5ouma/opml-generator?style=flat-square)](https://github.com/5ouma/opml-generator/releases)
 [![JSR](https://jsr.io/badges/@5ouma/opml-generator?style=flat-square)](https://jsr.io/@5ouma/opml-generator)
+[![JSR Score](https://jsr.io/badges/@5ouma/opml-generator/score)](https://jsr.io/@5ouma/opml-generator)
 <br />
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/5ouma/opml-generator?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/5ouma/opml-generator?style=flat-square)
