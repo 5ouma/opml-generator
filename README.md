@@ -69,7 +69,7 @@ OPML Generator has 2 ways to convert TOML to OPML.
 
        steps:
          - name: 🦕 Setup Deno
-           uses: denoland/setup-deno@1
+           uses: denoland/setup-deno@v1
            with:
              deno-version: v1.x
 
