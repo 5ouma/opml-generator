@@ -7,12 +7,12 @@ on:
     paths:
       - "**.ts"
       - deno.lock
-      - .github/workflows/test.yml
+      - .github/workflows/ci.yml
   pull_request:
     paths:
       - "**.ts"
       - deno.lock
-      - .github/workflows/test.yml
+      - .github/workflows/ci.yml
 
 jobs:
   lint:
