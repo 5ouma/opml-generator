@@ -2,19 +2,19 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "jsr:@libs/typing@2": "jsr:@libs/typing@2.8.2",
+      "jsr:@libs/typing@2": "jsr:@libs/typing@2.9.0",
       "jsr:@libs/xml@5.4.14": "jsr:@libs/xml@5.4.14",
       "jsr:@std/assert@1.0.3": "jsr:@std/assert@1.0.3",
       "jsr:@std/cli@1.0.4": "jsr:@std/cli@1.0.4",
       "jsr:@std/collections@^1.0.5": "jsr:@std/collections@1.0.5",
-      "jsr:@std/internal@^1.0.2": "jsr:@std/internal@1.0.2",
+      "jsr:@std/internal@^1.0.2": "jsr:@std/internal@1.0.3",
       "jsr:@std/path@1.0.3": "jsr:@std/path@1.0.3",
       "jsr:@std/toml@1.0.1": "jsr:@std/toml@1.0.1",
       "jsr:@wok/case@1.0.1": "jsr:@wok/case@1.0.1"
     },
     "jsr": {
-      "@libs/typing@2.8.2": {
-        "integrity": "c53f8aad9b01621de893aeac5d6cd592ec2ce783f8e89b677dcd81490a3be0a0"
+      "@libs/typing@2.9.0": {
+        "integrity": "ddf35ea652b807cd9b19b4f3f163fb5d76d57299053753fbd01ba8b02d9306ad"
       },
       "@libs/xml@5.4.14": {
         "integrity": "0e7ae72a061d38cc7a9de7ab70e787770ca82b9a1a6028ea55d4705c598ef660",
@@ -34,8 +34,8 @@
       "@std/collections@1.0.5": {
         "integrity": "ab9eac23b57a0c0b89ba45134e61561f69f3d001f37235a248ed40be260c0c10"
       },
-      "@std/internal@1.0.2": {
-        "integrity": "f4cabe2021352e8bfc24e6569700df87bf070914fc38d4b23eddd20108ac4495"
+      "@std/internal@1.0.3": {
+        "integrity": "208e9b94a3d5649bd880e9ca38b885ab7651ab5b5303a56ed25de4755fb7b11e"
       },
       "@std/path@1.0.3": {
         "integrity": "cd89d014ce7eb3742f2147b990f6753ee51d95276bfc211bc50c860c1bc7df6f"
