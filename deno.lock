@@ -5,7 +5,7 @@
       "jsr:@libs/typing@2": "jsr:@libs/typing@2.9.0",
       "jsr:@libs/xml@5.4.16": "jsr:@libs/xml@5.4.16",
       "jsr:@std/assert@1.0.6": "jsr:@std/assert@1.0.6",
-      "jsr:@std/cli@1.0.4": "jsr:@std/cli@1.0.4",
+      "jsr:@std/cli@1.0.6": "jsr:@std/cli@1.0.6",
       "jsr:@std/collections@^1.0.5": "jsr:@std/collections@1.0.5",
       "jsr:@std/internal@^1.0.4": "jsr:@std/internal@1.0.4",
       "jsr:@std/path@1.0.3": "jsr:@std/path@1.0.3",
@@ -28,8 +28,8 @@
           "jsr:@std/internal@^1.0.4"
         ]
       },
-      "@std/cli@1.0.4": {
-        "integrity": "79ca75add572a99a8ba93ae37ccbd8d43fb4e2b635a8a7ebebb4f2d092048764"
+      "@std/cli@1.0.6": {
+        "integrity": "d22d8b38c66c666d7ad1f2a66c5b122da1704f985d3c47f01129f05abb6c5d3d"
       },
       "@std/collections@1.0.5": {
         "integrity": "ab9eac23b57a0c0b89ba45134e61561f69f3d001f37235a248ed40be260c0c10"
@@ -56,7 +56,7 @@
     "dependencies": [
       "jsr:@libs/xml@5.4.16",
       "jsr:@std/assert@1.0.6",
-      "jsr:@std/cli@1.0.4",
+      "jsr:@std/cli@1.0.6",
       "jsr:@std/path@1.0.3",
       "jsr:@std/toml@1.0.1",
       "jsr:@wok/case@1.0.1"
