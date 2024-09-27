@@ -2,8 +2,8 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "jsr:@libs/typing@2": "jsr:@libs/typing@2.8.2",
-      "jsr:@libs/xml@5.4.14": "jsr:@libs/xml@5.4.14",
+      "jsr:@libs/typing@2": "jsr:@libs/typing@2.9.0",
+      "jsr:@libs/xml@5.4.16": "jsr:@libs/xml@5.4.16",
       "jsr:@std/assert@1.0.3": "jsr:@std/assert@1.0.3",
       "jsr:@std/cli@1.0.4": "jsr:@std/cli@1.0.4",
       "jsr:@std/collections@^1.0.5": "jsr:@std/collections@1.0.5",
@@ -13,11 +13,11 @@
       "jsr:@wok/case@1.0.1": "jsr:@wok/case@1.0.1"
     },
     "jsr": {
-      "@libs/typing@2.8.2": {
-        "integrity": "c53f8aad9b01621de893aeac5d6cd592ec2ce783f8e89b677dcd81490a3be0a0"
+      "@libs/typing@2.9.0": {
+        "integrity": "ddf35ea652b807cd9b19b4f3f163fb5d76d57299053753fbd01ba8b02d9306ad"
       },
-      "@libs/xml@5.4.14": {
-        "integrity": "0e7ae72a061d38cc7a9de7ab70e787770ca82b9a1a6028ea55d4705c598ef660",
+      "@libs/xml@5.4.16": {
+        "integrity": "6537b916340343261317a9f81693539a01e8530bc9896a6bbaa72d3a3cba798a",
         "dependencies": [
           "jsr:@libs/typing@2"
         ]
@@ -54,7 +54,7 @@
   "remote": {},
   "workspace": {
     "dependencies": [
-      "jsr:@libs/xml@5.4.14",
+      "jsr:@libs/xml@5.4.16",
       "jsr:@std/assert@1.0.3",
       "jsr:@std/cli@1.0.4",
       "jsr:@std/path@1.0.3",
