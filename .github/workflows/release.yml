@@ -31,7 +31,7 @@ jobs:
             echo "next=v$version" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: 🚀 Rrelease a New Version
+      - name: 🚀 Release a New Version
         if: ${{ steps.version.outputs.next != '' }}
         run: gh release create "${{ steps.version.outputs.next }}" --generate-notes
         env:
