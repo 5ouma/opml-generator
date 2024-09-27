@@ -13,10 +13,10 @@
     "cov": "deno task test --coverage && deno coverage --lcov > coverage.lcov"
   },
   "imports": {
-    "@libs/xml": "jsr:@libs/xml@5.4.14",
-    "@std/assert": "jsr:@std/assert@1.0.3",
-    "@std/cli": "jsr:@std/cli@1.0.4",
-    "@std/path": "jsr:@std/path@1.0.3",
+    "@libs/xml": "jsr:@libs/xml@5.4.16",
+    "@std/assert": "jsr:@std/assert@1.0.6",
+    "@std/cli": "jsr:@std/cli@1.0.6",
+    "@std/path": "jsr:@std/path@1.0.6",
     "@std/toml": "jsr:@std/toml@1.0.1",
     "@wok/case": "jsr:@wok/case@1.0.1"
   }
