@@ -1,0 +1,20 @@
+name: 🦕 Setup Deno with Cache
+description: Install Deno and cache project dependencies
+
+runs:
+  using: composite
+
+  steps:
+    - name: 🦕 Setup Deno
+      uses: denoland/setup-deno@5e01c016a857a4dbb5afe9d0f9733cd472cba985 # v1.5.1
+      with:
+        deno-version: v1.x
+
+    - name: 🫙 Cache Deno Dependencies
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8 # v4.1.1
+      with:
+        path: |
+          ~/.deno
+          ~/.cache/deno
+        key: ${{ runner.os }}-deno-${{ hashFiles('./deno.lock') }}
+        restore-keys: ${{ runner.os }}-deno-
