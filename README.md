@@ -54,42 +54,8 @@ OPML Generator has 2 ways to convert TOML to OPML.
 
    > [🌍 Environment Variables](#-environment-variables)
 
-4. Add this workflow file to `.github/workflows`:
-
-   ```yaml
-   name: ⬆️ Update OPML in Gist
-
-   on:
-     schedule: [cron: 0 0 * * *]
-     workflow_dispatch:
-
-   jobs:
-     Update:
-       runs-on: Ubuntu-Latest
-
-       steps:
-         - name: 🦕 Setup Deno
-           uses: denoland/setup-deno@v1
-           with:
-             deno-version: v1.x
-
-         - name: ⬇️ Download the TOML and OPML repository
-           run: |
-             git clone "https://gist.github.com/${{ secrets.TOML_GIST_ID }}.git" feeds
-             git clone "https://gist.github.com/${{ secrets.OPML_GIST_ID }}.git" outputs
-
-         - name: 🧰 Generate OPML file
-           run: deno run -A jsr:@5ouma/opml-generator --feeds=./feeds/feeds.toml --outputs=./outputs
-
-         - name: ⬆️ Upload OPML file
-           env:
-             GH_TOKEN: ${{ secrets.TOKEN }}
-           run: |
-             git -C 'outputs' add -AN
-             while read -r file; do
-               gh gist edit ${{ secrets.OPML_GIST_ID }} "./outputs/$file" -a "./outputs/$file"
-             done < <(git -C 'outputs' diff --name-only HEAD)
-   ```
+4. Add [`.github/workflows/gist-update.yml`](./.github/workflows/gist-update.yml)
+   to your repository
 
 🎉 Automatically update every 0 a.m. UTC
 
