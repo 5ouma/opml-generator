@@ -1,4 +1,4 @@
-type site = {
+export type site = {
   type: string;
   url: URL;
 };
@@ -11,7 +11,9 @@ type site = {
  *
  * @example
  * ```ts
- * const sites: sites = [
+ * import type { site } from "./sites.ts";
+ *
+ * const sites: site[] = [
  *   { type: "type", url: new URL("https://example.com/rss") }
  * ];
  * ```
@@ -45,7 +47,7 @@ const sites: site[] = [
  *
  * @example
  * ```ts
- * const url: URL = transcodeXmlUrl("title", "type", "id");
+ * const url: URL = transcodeXmlUrl("feed title", "bluesky", "username");
  * ```
  */
 export function transcodeXmlUrl(

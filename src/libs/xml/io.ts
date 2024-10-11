@@ -18,7 +18,18 @@ import type { List, Lists } from "../types.ts";
  *
  * @example
  * ```ts
- * await write(feeds, "feeds");
+ * import type { Lists } from "../types.ts";
+ *
+ * const feeds: Lists = {
+ *   lists: [{
+ *     name: "list name",
+ *     feeds: [{
+ *       title: "feed title",
+ *       xmlUrl: new URL("https://example.com/feed"),
+ *    }],
+ *   }],
+ * };
+ * await write(feeds, "outputs");
  * ```
  */
 export async function write(feeds: Lists, dir: string): Promise<void> {

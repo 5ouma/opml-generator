@@ -12,11 +12,13 @@ import type { Feed, List, OPMLOutline } from "../types.ts";
  *
  * @example
  * ```ts
+ * import type { List } from "../types.ts";
+ *
  * const list: List = {
  *   name: "list name",
  *   feeds: [{
  *     title: "feed title",
- *     xmlUrl: "https://example.com/feed",
+ *     xmlUrl: new URL("https://example.com/feed"),
  *   }],
  * };
  * const opml: string = convert(list);

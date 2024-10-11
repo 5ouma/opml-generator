@@ -18,7 +18,9 @@ import type { Lists } from "../types.ts";
  *
  * @example
  * ```ts
- * const lists: Lists = await read("lists.toml");
+ * import type { Lists } from "../types.ts"
+ *
+ * const lists: Lists = await read(".github/assets/example/feeds.toml");
  * ```
  */
 export async function read(file: string): Promise<Lists> {
