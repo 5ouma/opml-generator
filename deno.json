@@ -7,13 +7,14 @@
     "exclude": ["**/*.test.ts"]
   },
   "fmt": { "exclude": ["LICENSE", "README.md", ".github/**/*.md"] },
+  "lock": { "frozen": true },
   "tasks": {
-    "gen": "deno run --allow-env='NITTER_DOMAIN' --allow-read --allow-write src/main.ts",
-    "test": "deno test --allow-env='NITTER_DOMAIN' --allow-read --allow-write --parallel --shuffle",
+    "gen": "deno run -RWE='NITTER_DOMAIN' src/main.ts",
+    "test": "deno test --doc -RWE='NITTER_DOMAIN' --parallel --shuffle",
     "cov": "deno task test --coverage && deno coverage --lcov > coverage.lcov"
   },
   "imports": {
-    "@libs/xml": "jsr:@libs/xml@5.4.16",
+    "@libs/xml": "jsr:@libs/xml@6.0.0",
     "@std/assert": "jsr:@std/assert@1.0.6",
     "@std/cli": "jsr:@std/cli@1.0.6",
     "@std/path": "jsr:@std/path@1.0.6",

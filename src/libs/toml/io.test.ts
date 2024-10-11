@@ -34,7 +34,10 @@ xmlUrl = "https://example.com/feed"
     try {
       await read("file-not-found.toml");
     } catch (error) {
-      assertEquals(error.message, 'file not found: "file-not-found.toml"');
+      assertEquals(
+        (error as Error).message,
+        'file not found: "file-not-found.toml"',
+      );
     }
   });
 
@@ -44,7 +47,7 @@ xmlUrl = "https://example.com/feed"
     try {
       await read(file);
     } catch (error) {
-      assertEquals(error.message, `permission denied: "${file}"`);
+      assertEquals((error as Error).message, `permission denied: "${file}"`);
     }
   });
 

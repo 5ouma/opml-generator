@@ -23,7 +23,7 @@ Deno.test("Get XML URL", async (t: Deno.TestContext) => {
       transcodeXmlUrl(feed.title, undefined, feed.id);
     } catch (error) {
       assertEquals(
-        error.message,
+        (error as Error).message,
         `parameter not set: "type" of "${feed.title}"`,
       );
     }
@@ -34,7 +34,10 @@ Deno.test("Get XML URL", async (t: Deno.TestContext) => {
     try {
       transcodeXmlUrl(feed.title, feed.type, undefined);
     } catch (error) {
-      assertEquals(error.message, `parameter not set: "id" of "${feed.title}"`);
+      assertEquals(
+        (error as Error).message,
+        `parameter not set: "id" of "${feed.title}"`,
+      );
     }
   });
 
@@ -44,7 +47,7 @@ Deno.test("Get XML URL", async (t: Deno.TestContext) => {
       transcodeXmlUrl(feed.title, feed.type, feed.id);
     } catch (error) {
       assertEquals(
-        error.message,
+        (error as Error).message,
         `site not found: "${feed.type}" of "${feed.title}"`,
       );
     }

@@ -1,4 +1,17 @@
-type site = {
+/**
+ * Types for the site.
+ *
+ * @property type The site name
+ * @property url The site URL
+ *
+ * @example
+ * ```ts
+ * import type { site } from "./sites.ts";
+ *
+ * const site: site = { type: "type", url: new URL("https://example.com/rss") };
+ * ```
+ */
+export type site = {
   type: string;
   url: URL;
 };
@@ -11,7 +24,9 @@ type site = {
  *
  * @example
  * ```ts
- * const sites: sites = [
+ * import type { site } from "./sites.ts";
+ *
+ * const sites: site[] = [
  *   { type: "type", url: new URL("https://example.com/rss") }
  * ];
  * ```
@@ -45,7 +60,7 @@ const sites: site[] = [
  *
  * @example
  * ```ts
- * const url: URL = transcodeXmlUrl("title", "type", "id");
+ * const url: URL = transcodeXmlUrl("feed title", "bluesky", "username");
  * ```
  */
 export function transcodeXmlUrl(

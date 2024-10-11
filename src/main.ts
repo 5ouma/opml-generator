@@ -14,7 +14,7 @@ try {
   const feeds: Lists = await toml.read(flags.feeds);
   await xml.write(feeds, flags.output);
 } catch (error) {
-  console.error(`🚨 ${error.message}`);
+  console.error(`🚨 ${(error as Error).message}`);
   Deno.exit(1);
 }
 console.log(`✅ ${basename(flags.feeds)}`);

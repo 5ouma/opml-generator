@@ -12,6 +12,8 @@ import type { Feed, List, Lists } from "../types.ts";
  *
  * @example
  * ```ts
+ * import type { Lists } from "../types.ts"
+ *
  * const toml = `
  * [[lists]]
  * name = "list name"
