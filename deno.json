@@ -9,7 +9,7 @@
   "fmt": { "exclude": ["LICENSE", "README.md", ".github/**/*.md"] },
   "tasks": {
     "gen": "deno run -RWE='NITTER_DOMAIN' src/main.ts",
-    "test": "deno test -RWE='NITTER_DOMAIN' --parallel --shuffle",
+    "test": "deno test --doc -RWE='NITTER_DOMAIN' --parallel --shuffle",
     "cov": "deno task test --coverage && deno coverage --lcov > coverage.lcov"
   },
   "imports": {

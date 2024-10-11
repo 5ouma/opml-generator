@@ -58,7 +58,7 @@ jobs:
         uses: ./.github/actions/setup-deno-with-cache
 
       - name: 🔍 Type Check
-        run: deno check ./src
+        run: deno check --doc ./src
 
   test:
     name: 🧪 Test
