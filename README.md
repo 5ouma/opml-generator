@@ -54,8 +54,8 @@ OPML Generator has 2 ways to convert TOML to OPML.
 
    > [🌍 Environment Variables](#-environment-variables)
 
-4. Add [`.github/workflows/gist-update.yml`](./.github/workflows/gist-update.yml)
-   to your repository
+4. Add [`gist-update.yml`](./.github/workflows/gist-update.yml)
+   to your repository's `.github/workflows` directory.
 
 🎉 Automatically update every 0 a.m. UTC
 
