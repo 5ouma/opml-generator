@@ -1,3 +1,16 @@
+/**
+ * Types for the site.
+ *
+ * @property type The site name
+ * @property url The site URL
+ *
+ * @example
+ * ```ts
+ * import type { site } from "./sites.ts";
+ *
+ * const site: site = { type: "type", url: new URL("https://example.com/rss") };
+ * ```
+ */
 export type site = {
   type: string;
   url: URL;
