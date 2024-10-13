@@ -28,7 +28,8 @@ OPML Generator has 2 ways to convert TOML to OPML.
 
 ### 💻 On Local
 
-1. Prepare your TOML file (Reference: [feeds.toml](./.github/assets/example/feeds.toml))
+1. Prepare your TOML file (Reference:
+   [feeds.toml](./.github/assets/example/feeds.toml))
 
 2. Run this command
 
@@ -49,13 +50,13 @@ OPML Generator has 2 ways to convert TOML to OPML.
 
 2. Prepare your repository to run
 
-3. Add Actions secrets
-   from `Settings > Secrets and variables | Actions` in the sidebar
+3. Add Actions secrets from `Settings > Secrets and variables | Actions` in the
+   sidebar
 
    > [🌍 Environment Variables](#-environment-variables)
 
-4. Add [`gist-update.yml`](./.github/workflows/gist-update.yml)
-   to your repository's `.github/workflows` directory.
+4. Add [`gist-update.yml`](./.github/workflows/gist-update.yml) to your
+   repository's `.github/workflows` directory.
 
 🎉 Automatically update every 0 a.m. UTC
 
@@ -77,9 +78,9 @@ OPML Generator has 2 ways to convert TOML to OPML.
 
 ## 🗞️ Subscribe OPML
 
-For Inoreader, please see the official blog, [**OPML subscriptions**](https://www.inoreader.com/blog/2014/05/opml-subscriptions.html).
-<br />
-For other RSS readers, please see each help page.
+For Inoreader, please see the official blog,
+[**OPML subscriptions**](https://www.inoreader.com/blog/2014/05/opml-subscriptions.html).
+<br /> For other RSS readers, please see each help page.
 
 <br /><br />
 
@@ -97,7 +98,6 @@ For other RSS readers, please see each help page.
 
 ## 🎽 Contributing
 
-I happily welcome your contributions!
-Before you contribute,
-I would recommend reading [CONTRIBUTING.md](./.github/CONTRIBUTING.md)
-for a better development experience.
+I happily welcome your contributions! Before you contribute, I would recommend
+reading [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for a better development
+experience.

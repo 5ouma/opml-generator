@@ -6,7 +6,6 @@
     "include": ["LICENSE", "README.md", "deno.json", "src/"],
     "exclude": ["**/*.test.ts"]
   },
-  "fmt": { "exclude": ["LICENSE", "README.md", ".github/**/*.md"] },
   "lock": { "frozen": true },
   "tasks": {
     "gen": "deno run -RWE='NITTER_DOMAIN' src/main.ts",

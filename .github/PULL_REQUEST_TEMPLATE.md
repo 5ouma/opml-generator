@@ -32,4 +32,5 @@ A clear and concise description
 
 <br />
 
-- [ ] I agree to follow the [Code of Conduct](https://github.com/5ouma/opml-generator/blob/main/.github/CODE_OF_CONDUCT.md).
+- [ ] I agree to follow the
+      [Code of Conduct](https://github.com/5ouma/opml-generator/blob/main/.github/CODE_OF_CONDUCT.md).
