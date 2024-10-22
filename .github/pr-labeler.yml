@@ -1,6 +1,4 @@
 alwaysReplace: true
-searchTitle: true
-searchBody: true
 
 customLabels:
   - text: "- [x] 🎉 New Feature"
@@ -21,11 +19,9 @@ customLabels:
     label: 🔧 Maintenance
   - text: "- [x] 🎽 CI"
     label: 🎽 CI
-  - text: "- [x] ⛓️ Dependencies"
-    label: ⛓️ Dependencies
   - text: "chore(deps): "
     label: ⛓️ Dependencies
   - text: "- [x] 🧠 Meta"
     label: 🧠 Meta
-  - text: Release v
+  - text: Release for v
     label: 🚀 Release

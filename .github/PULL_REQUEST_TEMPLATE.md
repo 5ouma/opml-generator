@@ -17,7 +17,6 @@ close #
 - [ ] 🧪 Testing
 - [ ] 🔧 Maintenance
 - [ ] 🎽 CI
-- [ ] ⛓️ Dependencies
 - [ ] 🧠 Meta
 
 <br />

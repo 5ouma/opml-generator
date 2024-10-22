@@ -4,13 +4,12 @@ on:
   push:
     branches:
       - main
-    paths:
-      - deno.json
   workflow_dispatch:
 
 permissions:
   contents: write
   id-token: write
+  pull-requests: write
 
 jobs:
   Release:
@@ -19,24 +18,13 @@ jobs:
     steps:
       - name: 🚚 Checkout Repository
         uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
-        with:
-          fetch-depth: 0
 
-      - name: 🔍 Check the Version
-        id: version
-        run: |
-          version="$(jq -r '.version' deno.json)"
-          tag="$(git tag -l | sort -V | tail -n 1)"
-          if [[ "v$version" != "$tag" ]]; then
-            echo "next=v$version" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: 🚀 Release a New Version
-        if: ${{ steps.version.outputs.next != '' }}
-        run: gh release create "${{ steps.version.outputs.next }}" --generate-notes
+      - name: 🏷️ Release a New Version
+        id: tagpr
+        uses: Songmu/tagpr@591c6e0c988bccee7dda02bce1af7a3b2dc47065 # v1.4.2
         env:
-          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 📦 Publish to JSR
-        if: ${{ steps.version.outputs.next != '' }}
+        if: ${{ steps.tagpr.outputs.tag != '' }}
         run: npx jsr publish
