@@ -1,0 +1,7 @@
+[tagpr]
+  releaseBranch = main
+  versionFile = deno.json
+  vPrefix = true
+  changelog = false
+  majorLabels = 🧨 Breaking Change
+  minorLabels = 🎉 New Feature
