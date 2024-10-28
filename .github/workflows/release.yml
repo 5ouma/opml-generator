@@ -23,6 +23,8 @@ jobs:
       - name: 🏷️ Release a New Version
         id: tagpr
         uses: Songmu/tagpr@3dca11e7c0d68637ee212ddd35acc3d30a7403a4 # v1.5.0
+        with:
+          config: .github/tagpr.ini
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

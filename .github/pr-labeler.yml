@@ -19,9 +19,9 @@ customLabels:
     label: 🔧 Maintenance
   - text: "- [x] 🎽 CI"
     label: 🎽 CI
-  - text: "chore(deps): "
-    label: ⛓️ Dependencies
   - text: "- [x] 🧠 Meta"
     label: 🧠 Meta
-  - text: Release for v
+  - text: "chore(deps): "
+    label: ⛓️ Dependencies
+  - text: "Release: v"
     label: 🚀 Release
