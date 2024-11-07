@@ -72,10 +72,16 @@ jobs:
         uses: ./.github/actions/setup-deno-with-cache
 
       - name: 🧪 Run Tests
-        run: deno task cov
+        run: deno task test:ci
 
       - name: ☂️ Upload Coverage
         uses: codecov/codecov-action@b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238 # v4.6.0
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: ☂️ Upload Test Results
+        if: ${{ !cancelled() }}
+        uses: codecov/test-results-action@9739113ad922ea0a9abb4b2c0f8bf6a4aa8ef820 # v1.0.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
