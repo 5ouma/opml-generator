@@ -16,7 +16,7 @@ on:
 
 jobs:
   lint:
-    name: 🧹 Lint
+    name: 🧹 Lint Check
     runs-on: Ubuntu-Latest
 
     steps:
@@ -33,7 +33,7 @@ jobs:
         run: deno doc --lint ./src
 
   format:
-    name: 📝 Format
+    name: 📝 Format Check
     runs-on: Ubuntu-Latest
 
     steps:
