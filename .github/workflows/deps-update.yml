@@ -23,4 +23,4 @@ jobs:
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           branch: deps-deno
           commit-prefix: "chore(deps):"
-          labels:
+          labels: ⛓️ Dependencies
