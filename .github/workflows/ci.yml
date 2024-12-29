@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: 🦕 Setup Deno with Cache
-        uses: 5ouma/utils/setup-deno-with-cache@b7d4ee85b930f3385155f60be3a05aef8d3e5ad6 # main
+        uses: 5ouma/utils/setup-deno-with-cache@3772ac6741789e640a6e365103ed944e9bf80e6d # main
 
       - name: 🧹 Lint Check
         run: deno lint
@@ -41,7 +41,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: 🦕 Setup Deno with Cache
-        uses: 5ouma/utils/setup-deno-with-cache@b7d4ee85b930f3385155f60be3a05aef8d3e5ad6 # main
+        uses: 5ouma/utils/setup-deno-with-cache@3772ac6741789e640a6e365103ed944e9bf80e6d # main
 
       - name: 📝 Format Check
         run: deno fmt --check
@@ -55,7 +55,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: 🦕 Setup Deno with Cache
-        uses: 5ouma/utils/setup-deno-with-cache@b7d4ee85b930f3385155f60be3a05aef8d3e5ad6 # main
+        uses: 5ouma/utils/setup-deno-with-cache@3772ac6741789e640a6e365103ed944e9bf80e6d # main
 
       - name: 🔍 Type Check
         run: deno check --doc ./src
@@ -69,7 +69,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: 🦕 Setup Deno with Cache
-        uses: 5ouma/utils/setup-deno-with-cache@b7d4ee85b930f3385155f60be3a05aef8d3e5ad6 # main
+        uses: 5ouma/utils/setup-deno-with-cache@3772ac6741789e640a6e365103ed944e9bf80e6d # main
 
       - name: 🧪 Run Tests
         run: deno task test:ci
@@ -94,7 +94,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: 🦕 Setup Deno with Cache
-        uses: 5ouma/utils/setup-deno-with-cache@b7d4ee85b930f3385155f60be3a05aef8d3e5ad6 # main
+        uses: 5ouma/utils/setup-deno-with-cache@3772ac6741789e640a6e365103ed944e9bf80e6d # main
 
       - name: 📦 Dry Run Publish
         run: deno publish --dry-run
