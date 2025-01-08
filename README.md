@@ -4,19 +4,18 @@
 
 **📰 Generate OPML file via TOML file easily**
 
-[![GitHub Release](https://img.shields.io/github/v/release/5ouma/opml-generator?style=flat-square)](https://github.com/5ouma/opml-generator/releases)
+<br />
+
+[![GitHub Release](https://img.shields.io/github/v/release/5ouma/opml-generator?label=Release&style=flat-square)](https://github.com/5ouma/opml-generator/releases)
 [![JSR](https://jsr.io/badges/@5ouma/opml-generator?style=flat-square)](https://jsr.io/@5ouma/opml-generator)
 [![JSR Score](https://jsr.io/badges/@5ouma/opml-generator/score)](https://jsr.io/@5ouma/opml-generator)
 <br />
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/5ouma/opml-generator?style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/5ouma/opml-generator?style=flat-square)
-[![GitHub last commit](https://img.shields.io/github/last-commit/5ouma/opml-generator?style=flat-square)](https://github.com/5ouma/opml-generator/commit/HEAD)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/5ouma/opml-generator?style=flat-square)](https://github.com/5ouma/opml-generator/commits/main)
-<br />
-[![CI](https://img.shields.io/github/actions/workflow/status/5ouma/opml-generator/ci.yml?label=ci&style=flat-square)](https://github.com/5ouma/opml-generator/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/actions/workflow/status/5ouma/opml-generator/release.yml?label=release&style=flat-square)](https://github.com/5ouma/opml-generator/actions/workflows/release.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/5ouma/opml-generator/ci.yml?label=CI&style=flat-square)](https://github.com/5ouma/opml-generator/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/actions/workflow/status/5ouma/opml-generator/release.yml?label=Release&style=flat-square)](https://github.com/5ouma/opml-generator/actions/workflows/release.yml)
 [![pre-commit](https://img.shields.io/github/actions/workflow/status/5ouma/opml-generator/pre-commit.yml?label=pre-commit&style=flat-square)](https://github.com/5ouma/opml-generator/actions/workflows/pre-commit.yml)
 [![codecov](https://codecov.io/github/5ouma/opml-generator/graph/badge.svg)](https://codecov.io/github/5ouma/opml-generator)
+
+![Repobeats Analytics Image](https://repobeats.axiom.co/api/embed/aef561d5f4f31e815fc5a245abe752ac29d5ad01.svg)
 
 </div>
 
