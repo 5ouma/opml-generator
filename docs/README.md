@@ -27,8 +27,7 @@ OPML Generator has 2 ways to convert TOML to OPML.
 
 ### 💻 On Local
 
-1. Prepare your TOML file (Reference:
-   [feeds.toml](./.github/assets/example/feeds.toml))
+1. Prepare your TOML file (Reference: [`feeds.toml`])
 
 2. Run this command
 
@@ -44,7 +43,7 @@ OPML Generator has 2 ways to convert TOML to OPML.
 
 1. Create two [GitHub Gist](https://gist.github.com):
 
-   - includes [`feeds.toml`](./.github/assets/example/feeds.toml)
+   - includes [`feeds.toml`]
    - for outputs
 
 2. Prepare your repository to run
@@ -70,7 +69,7 @@ OPML Generator has 2 ways to convert TOML to OPML.
 |     `TOKEN`     |  [Personal Access Token]   |           yes           |
 | `NITTER_DOMAIN` |     Nitter RSS domain      |           no            |
 
-[`feeds.toml`]: ./.github/assets/example/feeds.toml
+[`feeds.toml`]: ./assets/example/feeds.toml
 [Personal Access Token]: https://github.com/settings/tokens/new?description=OPML%20Generator&scopes=gist
 
 <br /><br />
