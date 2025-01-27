@@ -20,7 +20,7 @@ import type { Lists } from "../types.ts";
  * ```ts
  * import type { Lists } from "../types.ts"
  *
- * const lists: Lists = await read(".github/assets/example/feeds.toml");
+ * const lists: Lists = await read("./docs/assets/example/feeds.toml");
  * ```
  */
 export async function read(file: string): Promise<Lists> {
