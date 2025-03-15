@@ -5,12 +5,13 @@ on:
     - cron: 0 0 * * *
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: {}
 
 jobs:
   Update:
+    permissions:
+      contents: write
+      pull-requests: write
     runs-on: Ubuntu-Latest
 
     steps:

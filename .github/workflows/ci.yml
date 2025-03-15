@@ -14,6 +14,8 @@ on:
       - deno.lock
       - .github/workflows/ci.yml
 
+permissions: {}
+
 jobs:
   lint-check:
     name: 🧹 Lint Check
