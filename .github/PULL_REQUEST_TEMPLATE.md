@@ -16,20 +16,6 @@ A clear and concise description
 
 <br />
 
-### 🔄 Type of the Change
+- [ ] I agree to follow the [Code of Conduct].
 
-- [ ] 🎉 New Feature
-- [ ] 🧰 Bug
-- [ ] 🛡️ Security
-- [ ] 📖 Documentation
-- [ ] 🏎️ Performance
-- [ ] 🧹 Refactoring
-- [ ] 🧪 Testing
-- [ ] 🔧 Maintenance
-- [ ] 🎽 CI
-- [ ] 🧠 Meta
-
-<br />
-
-- [ ] I agree to follow the
-      [Code of Conduct](https://github.com/5ouma/opml-generator/blob/main/.github/CODE_OF_CONDUCT.md).
+[Code of Conduct]: https://github.com/5ouma/opml-generator/blob/main/.github/CODE_OF_CONDUCT.md
