@@ -1,0 +1,38 @@
+name: 🔒 Update Lock File
+
+on:
+  pull_request:
+    paths:
+      - deno.json
+
+permissions: {}
+
+jobs:
+  update:
+    name: 🔒 Update Lock File
+    permissions:
+      contents: write
+    if: ${{ github.actor == 'renovate[bot]' }}
+    runs-on: Ubuntu-Latest
+    outputs:
+      file_changed: ${{ steps.update.outputs.file_changed }}
+
+    steps:
+      - name: 🚚 Checkout Repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: 🔒 Update Lock File
+        id: update
+        uses: 5ouma/utils/update-deno-lock-file@main
+
+  ci:
+    name: 🎽 CI
+    needs: update
+    if: ${{ needs.update.outputs.file_changed == 'true' }}
+    uses: ./.github/workflows/ci.yml
+
+  pre-commit:
+    name: 🚸 pre-commit
+    needs: update
+    if: ${{ needs.update.outputs.file_changed == 'true' }}
+    uses: ./.github/workflows/pre-commit.yml
