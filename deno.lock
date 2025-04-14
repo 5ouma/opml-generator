@@ -1,8 +1,7 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@libs/typing@^3.1.2": "3.1.2",
-    "jsr:@libs/xml@6.0.3": "6.0.3",
+    "jsr:@libs/xml@6.0.4": "6.0.4",
     "jsr:@std/assert@1.0.9": "1.0.9",
     "jsr:@std/cli@1.0.8": "1.0.8",
     "jsr:@std/collections@^1.0.9": "1.0.9",
@@ -12,14 +11,8 @@
     "jsr:@wok/case@1.0.2": "1.0.2"
   },
   "jsr": {
-    "@libs/typing@3.1.2": {
-      "integrity": "72342a0eaedcc1f3f3ec18f8f9573759011c68f135e2ec6c7282c59843f7a37e"
-    },
-    "@libs/xml@6.0.3": {
-      "integrity": "85506d5c61b0110d26dbb02059ce5a543226c3501fccbc7692e2ba4921f95567",
-      "dependencies": [
-        "jsr:@libs/typing"
-      ]
+    "@libs/xml@6.0.4": {
+      "integrity": "c896f17016dbf5f2d62496e0bd6cd7db145c05987d0e45d4dd2c87785a60f528"
     },
     "@std/assert@1.0.9": {
       "integrity": "a9f0c611a869cc791b26f523eec54c7e187aab7932c2c8e8bea0622d13680dcd",
@@ -51,7 +44,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@libs/xml@6.0.3",
+      "jsr:@libs/xml@6.0.4",
       "jsr:@std/assert@1.0.9",
       "jsr:@std/cli@1.0.8",
       "jsr:@std/path@1.0.8",
