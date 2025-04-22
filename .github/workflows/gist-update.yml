@@ -9,10 +9,11 @@ permissions: {}
 jobs:
   Update:
     runs-on: Ubuntu-Latest
+    timeout-minutes: 1
 
     steps:
       - name: 🦕 Setup Deno
-        uses: denoland/setup-deno@v2
+        uses: denoland/setup-deno@909cc5acb0fdd60627fb858598759246509fa755 # v2.0.2
 
       - name: ⬇️ Download the TOML and OPML repository
         run: |

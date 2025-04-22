@@ -14,16 +14,19 @@ jobs:
       contents: write
     if: ${{ github.actor == 'renovate[bot]' }}
     runs-on: Ubuntu-Latest
+    timeout-minutes: 3
     outputs:
       file_changed: ${{ steps.update.outputs.file_changed }}
 
     steps:
       - name: 🚚 Checkout Repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
 
       - name: 🔒 Update Lock File
         id: update
-        uses: 5ouma/utils/update-deno-lock-file@main
+        uses: 5ouma/utils/update-deno-lock-file@3d7fe8d0af9597d68e95f581c032b77813c024af # v0.1.1
 
   ci:
     name: 🎽 CI
