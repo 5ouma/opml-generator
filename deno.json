@@ -16,7 +16,7 @@
     "@libs/xml": "jsr:@libs/xml@6.0.4",
     "@std/assert": "jsr:@std/assert@1.0.13",
     "@std/cli": "jsr:@std/cli@1.0.17",
-    "@std/path": "jsr:@std/path@1.0.8",
+    "@std/path": "jsr:@std/path@1.0.9",
     "@std/toml": "jsr:@std/toml@1.0.4",
     "@wok/case": "jsr:@wok/case@1.0.2"
   }
