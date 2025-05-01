@@ -4,10 +4,10 @@
     "jsr:@libs/xml@6.0.4": "6.0.4",
     "jsr:@std/assert@1.0.13": "1.0.13",
     "jsr:@std/cli@1.0.17": "1.0.17",
-    "jsr:@std/collections@^1.0.10": "1.0.10",
+    "jsr:@std/collections@^1.0.11": "1.0.11",
     "jsr:@std/internal@^1.0.6": "1.0.6",
     "jsr:@std/path@1.0.9": "1.0.9",
-    "jsr:@std/toml@1.0.4": "1.0.4",
+    "jsr:@std/toml@1.0.5": "1.0.5",
     "jsr:@wok/case@1.0.2": "1.0.2"
   },
   "jsr": {
@@ -23,8 +23,8 @@
     "@std/cli@1.0.17": {
       "integrity": "e15b9abe629e17be90cc6216327f03a29eae613365f1353837fa749aad29ce7b"
     },
-    "@std/collections@1.0.10": {
-      "integrity": "903af106a3d92970d74e20f7ebff77d9658af9bef4403f1dc42a7801c0575899"
+    "@std/collections@1.0.11": {
+      "integrity": "2f62cf9587484b1fff364f6c3e1f83478eea53dbb6faed6ffeda92ddb6b172f0"
     },
     "@std/internal@1.0.6": {
       "integrity": "9533b128f230f73bd209408bb07a4b12f8d4255ab2a4d22a1fd6d87304aca9a4"
@@ -32,8 +32,8 @@
     "@std/path@1.0.9": {
       "integrity": "260a49f11edd3db93dd38350bf9cd1b4d1366afa98e81b86167b4e3dd750129e"
     },
-    "@std/toml@1.0.4": {
-      "integrity": "8781e687d04c8fbe246b9c5714be01925792a94d943462c33777675ab557cff1",
+    "@std/toml@1.0.5": {
+      "integrity": "08061156e9c5716443a144b6e40a8668738b8b424ad99ab0b6fdf1b6ea4da806",
       "dependencies": [
         "jsr:@std/collections"
       ]
@@ -48,7 +48,7 @@
       "jsr:@std/assert@1.0.13",
       "jsr:@std/cli@1.0.17",
       "jsr:@std/path@1.0.9",
-      "jsr:@std/toml@1.0.4",
+      "jsr:@std/toml@1.0.5",
       "jsr:@wok/case@1.0.2"
     ]
   }
