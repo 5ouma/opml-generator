@@ -1,5 +1,4 @@
 feeds.toml
 outputs/
 coverage/
-coverage.lcov
 junit.xml

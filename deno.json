@@ -10,7 +10,7 @@
   "tasks": {
     "gen": "deno run -RWE='NITTER_DOMAIN' src/main.ts",
     "test": "deno test --doc -RWE='NITTER_DOMAIN' --parallel --shuffle",
-    "test:ci": "deno task test --coverage --junit-path='junit.xml' && deno coverage --lcov > coverage.lcov"
+    "test:cov": "deno task test --coverage --junit-path='junit.xml'"
   },
   "imports": {
     "@libs/xml": "jsr:@libs/xml@6.0.4",
