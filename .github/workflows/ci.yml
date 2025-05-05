@@ -89,7 +89,7 @@ jobs:
         uses: 5ouma/utils/setup-deno-with-cache@3d7fe8d0af9597d68e95f581c032b77813c024af # v0.1.1
 
       - name: 🧪 Run Tests
-        run: deno task test:ci
+        run: deno task test:cov
 
       - name: ☂️ Upload Coverage
         uses: codecov/codecov-action@ad3126e916f78f00edff4ed0317cf185271ccc2d # v5.4.2
