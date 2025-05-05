@@ -69,7 +69,7 @@ OPML Generator has 2 ways to convert TOML to OPML.
 |     `TOKEN`     |  [Personal Access Token]   |           yes           |
 | `NITTER_DOMAIN` |     Nitter RSS domain      |           no            |
 
-[`feeds.toml`]: ./assets/example/feeds.toml
+[`feeds.toml`]: ./docs/assets/example/feeds.toml
 [Personal Access Token]: https://github.com/settings/tokens/new?description=OPML%20Generator&scopes=gist
 
 <br /><br />
