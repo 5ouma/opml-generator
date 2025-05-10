@@ -30,7 +30,7 @@ jobs:
           persist-credentials: false
 
       - name: 🦕 Setup Deno with Cache
-        uses: 5ouma/utils/setup-deno-with-cache@5a1790ce25b801555b0202b0ce7aa98ee456951e # v0.1.2
+        uses: 5ouma/utils/setup-deno-with-cache@5d4d9189866ac7eb6c2d0534cf535f3f1f571cff # v0.1.4
 
       - name: 🧹 Lint Check
         run: deno lint
@@ -50,7 +50,7 @@ jobs:
           persist-credentials: false
 
       - name: 🦕 Setup Deno with Cache
-        uses: 5ouma/utils/setup-deno-with-cache@5a1790ce25b801555b0202b0ce7aa98ee456951e # v0.1.2
+        uses: 5ouma/utils/setup-deno-with-cache@5d4d9189866ac7eb6c2d0534cf535f3f1f571cff # v0.1.4
 
       - name: 📝 Format Check
         run: deno fmt --check
@@ -68,7 +68,7 @@ jobs:
           persist-credentials: false
 
       - name: 🦕 Setup Deno with Cache
-        uses: 5ouma/utils/setup-deno-with-cache@5a1790ce25b801555b0202b0ce7aa98ee456951e # v0.1.2
+        uses: 5ouma/utils/setup-deno-with-cache@5d4d9189866ac7eb6c2d0534cf535f3f1f571cff # v0.1.4
 
       - name: 🔍 Type Check
         run: deno check --doc ./src
@@ -86,7 +86,7 @@ jobs:
           persist-credentials: false
 
       - name: 🦕 Setup Deno with Cache
-        uses: 5ouma/utils/setup-deno-with-cache@5a1790ce25b801555b0202b0ce7aa98ee456951e # v0.1.2
+        uses: 5ouma/utils/setup-deno-with-cache@5d4d9189866ac7eb6c2d0534cf535f3f1f571cff # v0.1.4
 
       - name: 🧪 Run Tests
         run: deno task test:cov
@@ -115,7 +115,7 @@ jobs:
           persist-credentials: false
 
       - name: 🦕 Setup Deno with Cache
-        uses: 5ouma/utils/setup-deno-with-cache@5a1790ce25b801555b0202b0ce7aa98ee456951e # v0.1.2
+        uses: 5ouma/utils/setup-deno-with-cache@5d4d9189866ac7eb6c2d0534cf535f3f1f571cff # v0.1.4
 
       - name: 📦 Dry Run Publish
         run: deno publish --dry-run
