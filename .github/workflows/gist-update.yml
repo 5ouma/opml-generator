@@ -18,18 +18,22 @@ jobs:
           cache: true
 
       - name: ⬇️ Download the TOML and OPML repository
+        env:
+          TOML_GIST_ID: ${{ secrets.TOML_GIST_ID }}
+          OPML_GIST_ID: ${{ secrets.OPML_GIST_ID }}
         run: |
-          git clone "https://gist.github.com/${{ secrets.TOML_GIST_ID }}.git" feeds
-          git clone "https://gist.github.com/${{ secrets.OPML_GIST_ID }}.git" outputs
+          git clone "https://gist.github.com/$TOML_GIST_ID.git" feeds
+          git clone "https://gist.github.com/$OPML_GIST_ID.git" outputs
 
       - name: 🧰 Generate OPML File
         run: deno run -A jsr:@5ouma/opml-generator --feeds=./feeds/feeds.toml --outputs=./outputs
 
       - name: ⬆️ Upload OPML File
         env:
+          OPML_GIST_ID: ${{ secrets.OPML_GIST_ID }}
           GH_TOKEN: ${{ secrets.TOKEN }}
         run: |
           git -C 'outputs' add -AN
           while read -r file; do
-            gh gist edit ${{ secrets.OPML_GIST_ID }} "./outputs/$file" -a "./outputs/$file"
+            gh gist edit "$OPML_GIST_ID" "./outputs/$file" -a "./outputs/$file"
           done < <(git -C 'outputs' diff --name-only HEAD)
