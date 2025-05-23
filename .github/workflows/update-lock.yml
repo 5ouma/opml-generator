@@ -1,4 +1,4 @@
-name: 🔒 Update Lock File
+name: autofix.ci
 
 on:
   pull_request:
@@ -10,13 +10,9 @@ permissions: {}
 jobs:
   update:
     name: 🔒 Update Lock File
-    permissions:
-      contents: write
     if: ${{ github.actor == 'renovate[bot]' }}
     runs-on: Ubuntu-Latest
-    timeout-minutes: 3
-    outputs:
-      file_changed: ${{ steps.update.outputs.file_changed }}
+    timeout-minutes: 1
 
     steps:
       - name: 🚚 Checkout Repository
@@ -25,17 +21,4 @@ jobs:
           persist-credentials: false
 
       - name: 🔒 Update Lock File
-        id: update
         uses: 5ouma/utils/update-deno-lock-file@5b52f10a8f1aed51845efb3b3bb0ad822d43d706 # v0.3.0
-
-  ci:
-    name: 🎽 CI
-    needs: update
-    if: ${{ needs.update.outputs.file_changed == 'true' }}
-    uses: ./.github/workflows/ci.yml
-
-  pre-commit:
-    name: 🚸 pre-commit
-    needs: update
-    if: ${{ needs.update.outputs.file_changed == 'true' }}
-    uses: ./.github/workflows/pre-commit.yml
