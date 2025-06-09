@@ -11,8 +11,7 @@ Deno.test("Convert Lists to OPML", async (t: Deno.TestContext) => {
   <body>
     <outline title="feed title" text="feed title" xmlUrl="https://example.com/feed" type="rss"/>
   </body>
-</opml>
-`;
+</opml>`;
 
     const list: List = {
       name: "list name",
@@ -32,8 +31,7 @@ Deno.test("Convert Lists to OPML", async (t: Deno.TestContext) => {
   <body>
     <outline title="feed title" text="feed title" xmlUrl="https://bsky.app/profile/username/rss" type="rss"/>
   </body>
-</opml>
-`;
+</opml>`;
 
     const list: List = {
       name: "list name",
