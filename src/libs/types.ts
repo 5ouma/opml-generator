@@ -55,7 +55,7 @@ export type List = {
  * ```ts
  * const feed: Feed = {
  *   title: "Feed Title",
- *   xmlUrl: new URL("https://example.com/feed.xml")
+ *   xmlUrl: "https://example.com/feed.xml"
  * }
  * ```
  */
@@ -63,7 +63,7 @@ export type Feed = {
   title: string;
   type?: string;
   id?: string;
-  xmlUrl?: URL;
+  xmlUrl?: string;
 };
 
 /**
@@ -79,7 +79,7 @@ export type Feed = {
  * const outline: OPMLOutline = {
  *   "@title": "Outline Title",
  *   "@text": "Outline Text",
- *   "@xmlUrl": new URL("https://example.com/feed.xml"),
+ *   "@xmlUrl": "https://example.com/feed.xml",
  *   "@type": "rss"
  * }
  * ```
@@ -87,6 +87,6 @@ export type Feed = {
 export type OPMLOutline = {
   "@title": string;
   "@text": string;
-  "@xmlUrl": URL;
+  "@xmlUrl": string;
   "@type": "rss";
 };

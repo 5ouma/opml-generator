@@ -17,7 +17,7 @@ Deno.test("Convert Lists to OPML", async (t: Deno.TestContext) => {
       name: "list name",
       feeds: [{
         title: "feed title",
-        xmlUrl: new URL("https://example.com/feed"),
+        xmlUrl: "https://example.com/feed",
       }],
     };
 

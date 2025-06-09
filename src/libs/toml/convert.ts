@@ -30,7 +30,7 @@ export function convert(data: string): Lists {
   lists.lists.map((list: List) => {
     list.feeds.map((feed: Feed) => {
       feed.xmlUrl = feed.xmlUrl
-        ? new URL(feed.xmlUrl)
+        ? feed.xmlUrl
         : transcodeXmlUrl(feed.title, feed.type, feed.id);
     });
   });

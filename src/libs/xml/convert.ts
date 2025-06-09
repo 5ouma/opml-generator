@@ -18,7 +18,7 @@ import type { Feed, List, OPMLOutline } from "../types.ts";
  *   name: "list name",
  *   feeds: [{
  *     title: "feed title",
- *     xmlUrl: new URL("https://example.com/feed"),
+ *     xmlUrl: "https://example.com/feed",
  *   }],
  * };
  * const opml: string = convert(list);
@@ -31,7 +31,7 @@ export function convert(list: List): string {
         "@title": feed.title,
         "@text": feed.title,
         "@xmlUrl": feed.xmlUrl
-          ? new URL(feed.xmlUrl)
+          ? feed.xmlUrl
           : transcodeXmlUrl(feed.title, feed.type, feed.id),
         "@type": "rss",
       };

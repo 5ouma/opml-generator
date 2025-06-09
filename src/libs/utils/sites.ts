@@ -60,14 +60,14 @@ const sites: site[] = [
  *
  * @example
  * ```ts
- * const url: URL = transcodeXmlUrl("feed title", "bluesky", "username");
+ * const url: string = transcodeXmlUrl("feed title", "bluesky", "username");
  * ```
  */
 export function transcodeXmlUrl(
   title: string,
   type: string | undefined,
   id: string | undefined,
-): URL {
+): string {
   if (!type) throw new Error(`parameter not set: "type" of "${title}"`);
   if (!id) throw new Error(`parameter not set: "id" of "${title}"`);
 
@@ -75,5 +75,5 @@ export function transcodeXmlUrl(
     .find((site: site) => site.type === type)?.url;
   if (!url) throw new Error(`site not found: "${type}" of "${title}"`);
 
-  return new URL(url.href.replace("id", id));
+  return url.href.replace("id", id);
 }
