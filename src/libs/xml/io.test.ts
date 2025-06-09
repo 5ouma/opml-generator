@@ -21,8 +21,7 @@ Deno.test("Write XML", async () => {
   <body>
     <outline title="feed title" text="feed title" xmlUrl="https://example.com/feed" type="rss"/>
   </body>
-</opml>
-`;
+</opml>`;
 
   const dir: string = await Deno.makeTempDir();
   await write(lists, dir);
