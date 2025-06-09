@@ -19,7 +19,7 @@ xmlUrl = "https://example.com/feed"
         name: "list name",
         feeds: [{
           title: "feed title",
-          xmlUrl: new URL("https://example.com/feed"),
+          xmlUrl: "https://example.com/feed",
         }],
       }],
     };
@@ -45,7 +45,7 @@ id = "username"
           title: "feed title",
           type: "bluesky",
           id: "username",
-          xmlUrl: new URL("https://bsky.app/profile/username/rss"),
+          xmlUrl: "https://bsky.app/profile/username/rss",
         }],
       }],
     };

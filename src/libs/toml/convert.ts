@@ -29,9 +29,7 @@ export function convert(data: string): Lists {
   const lists: Lists = parse(data) as Lists;
   lists.lists.map((list: List) => {
     list.feeds.map((feed: Feed) => {
-      feed.xmlUrl = feed.xmlUrl
-        ? new URL(feed.xmlUrl)
-        : transcodeXmlUrl(feed.title, feed.type, feed.id);
+      feed.xmlUrl ??= transcodeXmlUrl(feed.title, feed.type, feed.id);
     });
   });
   return lists;

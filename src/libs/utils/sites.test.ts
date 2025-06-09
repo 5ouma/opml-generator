@@ -13,7 +13,7 @@ Deno.test("Get XML URL", async (t: Deno.TestContext) => {
 
     assertEquals(
       transcodeXmlUrl(feed.title, feed.type, feed.id),
-      new URL("https://bsky.app/profile/username/rss"),
+      "https://bsky.app/profile/username/rss",
     );
   });
 

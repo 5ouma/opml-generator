@@ -25,7 +25,7 @@ import type { List, Lists } from "../types.ts";
  *     name: "list name",
  *     feeds: [{
  *       title: "feed title",
- *       xmlUrl: new URL("https://example.com/feed"),
+ *       xmlUrl: "https://example.com/feed",
  *    }],
  *   }],
  * };
