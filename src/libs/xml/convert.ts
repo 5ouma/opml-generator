@@ -30,9 +30,8 @@ export function convert(list: List): string {
       return {
         "@title": feed.title,
         "@text": feed.title,
-        "@xmlUrl": feed.xmlUrl
-          ? feed.xmlUrl
-          : transcodeXmlUrl(feed.title, feed.type, feed.id),
+        "@xmlUrl": feed.xmlUrl ??
+          transcodeXmlUrl(feed.title, feed.type, feed.id),
         "@type": "rss",
       };
     }),
