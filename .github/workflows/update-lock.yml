@@ -8,17 +8,17 @@ on:
 permissions: {}
 
 jobs:
-  update:
+  update-lock:
     name: 🔒 Update Lock File
     if: ${{ github.actor == 'renovate[bot]' }}
     runs-on: Ubuntu-Latest
     timeout-minutes: 1
 
     steps:
-      - name: 🚚 Checkout Repository
+      - name: 🚚 Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
 
-      - name: 🔒 Update Lock File
+      - name: 🔒 Update lock file
         uses: 5ouma/utils/update-deno-lock-file@084665e94a15908074ca1400dd51b48243674167 # v0.4.1
