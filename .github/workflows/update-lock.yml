@@ -10,7 +10,7 @@ permissions: {}
 jobs:
   update-lock:
     name: 🔒 Update Lock File
-    if: ${{ github.actor == 'renovate[bot]' }}
+    if: ${{ github.event.pull_request.user.login == 'renovate[bot]' }}
     runs-on: Ubuntu-Latest
     timeout-minutes: 1
 
