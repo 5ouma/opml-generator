@@ -29,7 +29,8 @@ import type { List, Lists } from "../types.ts";
  *    }],
  *   }],
  * };
- * await write(feeds, "outputs");
+ * const dir: string = await Deno.makeTempDir();
+ * await write(feeds, dir);
  * ```
  */
 export async function write(feeds: Lists, dir: string): Promise<void> {
