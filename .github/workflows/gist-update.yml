@@ -13,18 +13,18 @@ jobs:
     timeout-minutes: 1
 
     steps:
-      - name: 🦕 Setup Deno
+      - name: 🦕 Set up Deno
         uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
         with:
           cache: true
 
       - name: ⬇️ Download TOML and OPML repositories
         run: |
-          git clone "https://gist.github.com/$TOML_GIST_ID.git" feeds
-          git clone "https://gist.github.com/$OPML_GIST_ID.git" outputs
+          git clone "https://gist.github.com/$toml.git" feeds
+          git clone "https://gist.github.com/$opml.git" outputs
         env:
-          TOML_GIST_ID: ${{ secrets.TOML_GIST_ID }}
-          OPML_GIST_ID: ${{ secrets.OPML_GIST_ID }}
+          toml: ${{ secrets.TOML_GIST_ID }}
+          opml: ${{ secrets.OPML_GIST_ID }}
 
       - name: 🧰 Generate OPML files
         run: deno run -A jsr:@5ouma/opml-generator --feeds=./feeds/feeds.toml --outputs=./outputs
@@ -33,8 +33,8 @@ jobs:
         run: |
           git -C 'outputs' add -AN
           while read -r file; do
-            gh gist edit "$OPML_GIST_ID" "./outputs/$file" -a "./outputs/$file"
+            gh gist edit "$opml" "./outputs/$file" -a "./outputs/$file"
           done < <(git -C 'outputs' diff --name-only HEAD)
         env:
-          OPML_GIST_ID: ${{ secrets.OPML_GIST_ID }}
+          opml: ${{ secrets.OPML_GIST_ID }}
           GH_TOKEN: ${{ secrets.TOKEN }}

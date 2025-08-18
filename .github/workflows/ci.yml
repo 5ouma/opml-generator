@@ -23,12 +23,12 @@ jobs:
     timeout-minutes: 1
 
     steps:
-      - name: 🚚 Checkout repository
+      - name: 🚚 Check out repository
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           persist-credentials: false
 
-      - name: 🦕 Setup Deno
+      - name: 🦕 Set up Deno
         id: setup-deno
         uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
         with:
@@ -50,12 +50,12 @@ jobs:
     timeout-minutes: 1
 
     steps:
-      - name: 🚚 Checkout repository
+      - name: 🚚 Check out repository
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           persist-credentials: false
 
-      - name: 🦕 Setup Deno
+      - name: 🦕 Set up Deno
         uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
 
       - name: 📝 Format check
@@ -67,12 +67,12 @@ jobs:
     timeout-minutes: 1
 
     steps:
-      - name: 🚚 Checkout repository
+      - name: 🚚 Check out repository
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           persist-credentials: false
 
-      - name: 🦕 Setup Deno
+      - name: 🦕 Set up Deno
         id: setup-deno
         uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
         with:
@@ -91,12 +91,12 @@ jobs:
     timeout-minutes: 1
 
     steps:
-      - name: 🚚 Checkout repository
+      - name: 🚚 Check out repository
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           persist-credentials: false
 
-      - name: 🦕 Setup Deno
+      - name: 🦕 Set up Deno
         id: setup-deno
         uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
         with:
@@ -126,12 +126,12 @@ jobs:
     timeout-minutes: 1
 
     steps:
-      - name: 🚚 Checkout repository
+      - name: 🚚 Check out repository
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           persist-credentials: false
 
-      - name: 🦕 Setup Deno
+      - name: 🦕 Set up Deno
         uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
 
       - name: 📦 Dry run publish
