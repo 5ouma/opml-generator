@@ -1,7 +1,7 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@libs/xml@7.0.0": "7.0.0",
+    "jsr:@libs/xml@7.0.2": "7.0.2",
     "jsr:@std/assert@1.0.14": "1.0.14",
     "jsr:@std/cli@1.0.21": "1.0.21",
     "jsr:@std/collections@^1.1.0": "1.1.0",
@@ -11,8 +11,8 @@
     "jsr:@wok/case@1.0.2": "1.0.2"
   },
   "jsr": {
-    "@libs/xml@7.0.0": {
-      "integrity": "4fe581ec16d4a58fdc085c89f721e024f06afe7303d62ed4c24c12b6dec98ece"
+    "@libs/xml@7.0.2": {
+      "integrity": "b0f8eb46328cdfc443e89eeb02dce2a9022c292c6342f2cbddcad8cf06cd5adf"
     },
     "@std/assert@1.0.14": {
       "integrity": "68d0d4a43b365abc927f45a9b85c639ea18a9fab96ad92281e493e4ed84abaa4",
@@ -50,7 +50,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@libs/xml@7.0.0",
+      "jsr:@libs/xml@7.0.2",
       "jsr:@std/assert@1.0.14",
       "jsr:@std/cli@1.0.21",
       "jsr:@std/path@1.1.2",
