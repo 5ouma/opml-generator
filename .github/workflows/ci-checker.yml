@@ -33,7 +33,16 @@ jobs:
     timeout-minutes: 1
 
     steps:
+      - name: 💳 Create GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@a8d616148505b5069dccd32f177bb87d7f39123b # v2.1.1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+
       - name: 🔀 Squash merge PR
         run: gh pr merge --repo="$GITHUB_REPOSITORY" "$GITHUB_HEAD_REF" --squash
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
