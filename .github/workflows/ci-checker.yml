@@ -24,9 +24,6 @@ jobs:
 
   merge-pr:
     name: 🔀 Merge PR
-    permissions:
-      contents: write
-      pull-requests: write
     needs: merge-gatekeeper
     if: ${{ github.event.pull_request.user.login == 'renovate[bot]' && github.event.sender.login == 'autofix-ci[bot]' && toJson(github.event.pull_request.requested_reviewers) == '[]' }}
     runs-on: Ubuntu-Latest
