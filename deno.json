@@ -1,6 +1,6 @@
 {
   "name": "@5ouma/opml-generator",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "exports": "./src/main.ts",
   "publish": {
     "include": ["LICENSE", "README.md", "deno.json", "src/"],
