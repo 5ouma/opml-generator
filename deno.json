@@ -6,10 +6,13 @@
     "include": ["LICENSE", "README.md", "deno.json", "src/"],
     "exclude": ["**/*.test.ts"]
   },
+  "permissions": {
+    "default": { "read": true, "write": true, "env": ["NITTER_DOMAIN"] }
+  },
   "lock": { "frozen": true },
   "tasks": {
-    "gen": "deno run -RWE='NITTER_DOMAIN' src/main.ts",
-    "test": "deno test --doc -RWE='NITTER_DOMAIN' --parallel --shuffle",
+    "gen": "deno run -P src/main.ts",
+    "test": "deno test -P --parallel --doc --shuffle",
     "test:cov": "deno task test --coverage --junit-path='junit.xml'"
   },
   "imports": {
