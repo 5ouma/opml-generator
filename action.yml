@@ -1,0 +1,52 @@
+name: ⬆️ Update OPML in Gist
+description: Generate OPML files from TOML files and upload to GitHub Gist
+
+inputs:
+  username:
+    description: GitHub username owning the Gist
+    required: true
+  feeds:
+    description: Gist ID containing the TOML feed file
+    required: true
+  outputs:
+    description: Gist ID to upload the output OPML files
+    required: true
+  token:
+    description: GitHub token to access GitHub Gist
+    required: true
+
+runs:
+  using: composite
+
+  steps:
+    - name: 🦕 Set up Deno
+      uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
+      with:
+        cache: true
+
+    - name: ⬇️ Download TOML file and OPML repository
+      run: |
+        curl -O "https://gist.githubusercontent.com/$username/$feeds/raw/feeds.toml"
+        git clone "https://gist.github.com/$outputs.git" outputs
+      shell: bash
+      env:
+        username: ${{ inputs.username }}
+        feeds: ${{ inputs.feeds }}
+        outputs: ${{ inputs.outputs }}
+
+    - name: 🧰 Generate OPML files
+      run: deno run -R=feeds.toml -W=outputs -E=NITTER_DOMAIN "jsr:@5ouma/opml-generator@${OPMLG_VERSION#v}"
+      shell: bash
+      env:
+        OPMLG_VERSION: v1.0.6
+
+    - name: ⬆️ Upload OPML files
+      run: |
+        git -C outputs add -AN
+        while read -r file; do
+          gh gist edit "$opml" "outputs/$file" -a "outputs/$file"
+        done < <(git -C outputs diff --name-only HEAD)
+      shell: bash
+      env:
+        opml: ${{ inputs.outputs }}
+        GH_TOKEN: ${{ inputs.token }}
