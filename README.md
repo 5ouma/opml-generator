@@ -53,21 +53,31 @@ OPML Generator has 2 ways to convert TOML to OPML.
 
    > [🌍 Environment Variables](#-environment-variables)
 
-4. Add [`gist-update.yml`](./.github/workflows/gist-update.yml) to your
-   repository's `.github/workflows` directory.
+4. Use this template in your workflow file
 
-🎉 Automatically update every 0 a.m. UTC
+   ```yml
+   jobs:
+     job:
+       runs-on: Ubuntu-Latest
+       steps:
+         - uses: 5ouma/opml-generator@v1.0.6
+           with:
+             username: ${{ github.repository_owner }}
+             feeds: ${{ secrets.FEEDS_GIST_ID }}
+             outputs: ${{ secrets.OUTPUTS_GIST_ID }}
+             token: ${{ secrets.TOKEN }}
+   ```
 
 <br /><br />
 
 ## 🌍 Environment Variables
 
-|      Name       |        Description         | GitHub Actions requires |
-| :-------------: | :------------------------: | :---------------------: |
-| `TOML_GIST_ID`  | Gist ID for [`feeds.toml`] |           yes           |
-| `OPML_GIST_ID`  |    Gist ID for outputs     |           yes           |
-|     `TOKEN`     |  [Personal Access Token]   |           yes           |
-| `NITTER_DOMAIN` |     Nitter RSS domain      |           no            |
+|       Name        |        Description         | GitHub Actions requires |
+| :---------------: | :------------------------: | :---------------------: |
+|  `FEEDS_GIST_ID`  | Gist ID for [`feeds.toml`] |           yes           |
+| `OUTPUTS_GIST_ID` |    Gist ID for outputs     |           yes           |
+|      `TOKEN`      |  [Personal Access Token]   |           yes           |
+|  `NITTER_DOMAIN`  |     Nitter RSS domain      |           no            |
 
 [`feeds.toml`]: ./docs/assets/example/feeds.toml
 [Personal Access Token]: https://github.com/settings/tokens/new?description=OPML%20Generator&scopes=gist
