@@ -38,7 +38,7 @@ runs:
       run: deno run -R=feeds.toml -W=outputs -E=NITTER_DOMAIN "jsr:@5ouma/opml-generator@${OPMLG_VERSION#v}"
       shell: bash
       env:
-        OPMLG_VERSION: v1.0.6
+        OPMLG_VERSION: v1.1.0
 
     - name: ⬆️ Upload OPML files
       run: |
