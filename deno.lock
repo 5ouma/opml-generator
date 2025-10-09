@@ -8,7 +8,7 @@
     "jsr:@std/internal@^1.0.10": "1.0.12",
     "jsr:@std/internal@^1.0.12": "1.0.12",
     "jsr:@std/path@1.1.2": "1.1.2",
-    "jsr:@std/toml@1.0.10": "1.0.10",
+    "jsr:@std/toml@1.0.11": "1.0.11",
     "jsr:@wok/case@1.0.2": "1.0.2"
   },
   "jsr": {
@@ -42,8 +42,8 @@
         "jsr:@std/internal@^1.0.10"
       ]
     },
-    "@std/toml@1.0.10": {
-      "integrity": "87b2b7ff95afe7209a868732eb013a2707be29a15229f5b57bb13eededff4655",
+    "@std/toml@1.0.11": {
+      "integrity": "e084988b872ca4bad6aedfb7350f6eeed0e8ba88e9ee5e1590621c5b5bb8f715",
       "dependencies": [
         "jsr:@std/collections"
       ]
@@ -58,7 +58,7 @@
       "jsr:@std/assert@1.0.15",
       "jsr:@std/cli@1.0.23",
       "jsr:@std/path@1.1.2",
-      "jsr:@std/toml@1.0.10",
+      "jsr:@std/toml@1.0.11",
       "jsr:@wok/case@1.0.2"
     ]
   }
