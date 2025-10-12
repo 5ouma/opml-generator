@@ -1,5 +1,9 @@
-name: ⬆️ Update OPML in Gist
+name: 📰 OPML Generator
 description: Generate OPML files from TOML files and upload to GitHub Gist
+
+branding:
+  icon: rss
+  color: orange
 
 inputs:
   username:
