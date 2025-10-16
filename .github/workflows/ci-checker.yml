@@ -43,3 +43,23 @@ jobs:
         run: gh pr merge --repo="$GITHUB_REPOSITORY" "$GITHUB_HEAD_REF" --squash
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
+
+  rebase-pr:
+    name: 🔄 Rebase PR
+    permissions:
+      pull-requests: write
+    needs: merge-pr
+    if: ${{ failure() }}
+    runs-on: Ubuntu-Latest
+    timeout-minutes: 1
+
+    steps:
+      - name: 🚚 Check out repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+
+      - name: 🔄 Rebase PR
+        run: gh pr edit "$GITHUB_HEAD_REF" --body "$(gh pr view "$GITHUB_HEAD_REF" --json=body --jq='.body' | sed 's/- \[ \] <!-- rebase-check -->/- [x] <!-- rebase-check -->/')"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
