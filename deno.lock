@@ -9,7 +9,7 @@
     "jsr:@std/internal@^1.0.12": "1.0.12",
     "jsr:@std/path@1.1.2": "1.1.2",
     "jsr:@std/toml@1.0.11": "1.0.11",
-    "jsr:@wok/case@1.0.2": "1.0.2"
+    "jsr:@wok/case@1.0.3": "1.0.3"
   },
   "jsr": {
     "@libs/xml@7.0.2": {
@@ -48,8 +48,8 @@
         "jsr:@std/collections"
       ]
     },
-    "@wok/case@1.0.2": {
-      "integrity": "5d7c4da6ac87a372d603c6ab6fb0e07ec74d4a712c3cb9051961a0892b1f3090"
+    "@wok/case@1.0.3": {
+      "integrity": "0e997a829ed02823857c4b9c30a693ab8f2e582bb25423c69318fcedaf760f15"
     }
   },
   "workspace": {
@@ -59,7 +59,7 @@
       "jsr:@std/cli@1.0.23",
       "jsr:@std/path@1.1.2",
       "jsr:@std/toml@1.0.11",
-      "jsr:@wok/case@1.0.2"
+      "jsr:@wok/case@1.0.3"
     ]
   }
 }
