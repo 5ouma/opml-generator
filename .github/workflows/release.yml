@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    runs-on: Ubuntu-Latest
+    runs-on: Ubuntu-Slim
     timeout-minutes: 1
     outputs:
       tag: ${{ steps.tagpr.outputs.tag }}
@@ -50,7 +50,7 @@ jobs:
       id-token: write
     needs: tagpr
     if: ${{ needs.tagpr.outputs.tag != '' }}
-    runs-on: Ubuntu-Latest
+    runs-on: Ubuntu-Slim
     timeout-minutes: 1
 
     steps:

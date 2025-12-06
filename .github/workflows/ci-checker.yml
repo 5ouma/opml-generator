@@ -26,7 +26,7 @@ jobs:
     name: 🔀 Merge PR
     needs: merge-gatekeeper
     if: ${{ github.event.pull_request.user.login == 'renovate[bot]' && github.event.sender.login == 'autofix-ci[bot]' && toJson(github.event.pull_request.requested_reviewers) == '[]' }}
-    runs-on: Ubuntu-Latest
+    runs-on: Ubuntu-Slim
     timeout-minutes: 1
 
     steps:
@@ -50,7 +50,7 @@ jobs:
       pull-requests: write
     needs: merge-pr
     if: ${{ failure() }}
-    runs-on: Ubuntu-Latest
+    runs-on: Ubuntu-Slim
     timeout-minutes: 1
 
     steps:
