@@ -11,7 +11,7 @@ jobs:
   update-lock:
     name: 🔒 Update Lock File
     if: ${{ github.event.pull_request.user.login == 'renovate[bot]' }}
-    runs-on: Ubuntu-Latest
+    runs-on: Ubuntu-Slim
     timeout-minutes: 1
 
     steps:
