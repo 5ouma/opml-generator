@@ -60,7 +60,7 @@ OPML Generator has 2 ways to convert TOML to OPML.
      job:
        runs-on: Ubuntu-Latest
        steps:
-         - uses: 5ouma/opml-generator@v1.1.0
+         - uses: 5ouma/opml-generator@v1.1.1
            with:
              username: ${{ github.repository_owner }}
              feeds: ${{ secrets.FEEDS_GIST_ID }}
