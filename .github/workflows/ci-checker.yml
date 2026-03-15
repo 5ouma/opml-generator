@@ -26,6 +26,7 @@ jobs:
     name: 🔀 Merge PR
     needs: merge-gatekeeper
     if: ${{ github.event.pull_request.user.login == 'renovate[bot]' && github.event.sender.login == 'autofix-ci[bot]' && toJson(github.event.pull_request.requested_reviewers) == '[]' }}
+    environment: CI-Checker
     runs-on: Ubuntu-Slim
     timeout-minutes: 1
 
@@ -34,7 +35,7 @@ jobs:
         id: app-token
         uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
         with:
-          app-id: ${{ secrets.APP_ID }}
+          app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
           permission-contents: write
           permission-pull-requests: write
