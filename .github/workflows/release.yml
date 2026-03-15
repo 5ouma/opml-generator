@@ -11,11 +11,11 @@ permissions: {}
 jobs:
   tagpr:
     name: 🔖 Release a New Version
-    environment: Release
     permissions:
       contents: write
       pull-requests: write
     runs-on: Ubuntu-Slim
+    environment: Release
     timeout-minutes: 1
     outputs:
       tag: ${{ steps.tagpr.outputs.tag }}

@@ -26,8 +26,8 @@ jobs:
     name: 🔀 Merge PR
     needs: merge-gatekeeper
     if: ${{ github.event.pull_request.user.login == 'renovate[bot]' && github.event.sender.login == 'autofix-ci[bot]' && toJson(github.event.pull_request.requested_reviewers) == '[]' }}
-    environment: CI-Checker
     runs-on: Ubuntu-Slim
+    environment: CI-Checker
     timeout-minutes: 1
 
     steps:
