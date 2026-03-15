@@ -87,6 +87,7 @@ jobs:
 
   test:
     name: 🧪 Test
+    environment: CI
     runs-on: Ubuntu-Slim
     timeout-minutes: 1
 
