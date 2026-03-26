@@ -15,7 +15,9 @@ jobs:
       contents: write
       pull-requests: write
     runs-on: Ubuntu-Slim
-    environment: Release
+    environment:
+      name: Release
+      deployment: false
     timeout-minutes: 1
     outputs:
       tag: ${{ steps.tagpr.outputs.tag }}
