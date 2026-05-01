@@ -21,4 +21,4 @@ jobs:
           persist-credentials: false
 
       - name: 🔒 Update lock file
-        uses: 5ouma/utils/update-deno-lock-file@89264fffe82e991f0045e4a1b80d243de3011934 # v0.9.5
+        uses: 5ouma/utils/update-deno-lock-file@debbbe9faf4c09a31436deb7bbdd6be8ef3637b4 # v0.10.2
