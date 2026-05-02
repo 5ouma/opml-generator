@@ -9,7 +9,6 @@
   "permissions": {
     "default": { "read": true, "write": true, "env": ["NITTER_DOMAIN"] }
   },
-  "lock": { "frozen": true },
   "tasks": {
     "gen": "deno run -P src/main.ts",
     "test": "deno test -P --parallel --doc --shuffle",
