@@ -36,6 +36,7 @@ jobs:
         id: setup-deno
         uses: denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282 # v2.0.4
         with:
+          deno-version: 2.7.14
           cache: true
 
       - name: 📦 Install dependencies
@@ -61,6 +62,8 @@ jobs:
 
       - name: 🦕 Set up Deno
         uses: denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282 # v2.0.4
+        with:
+          deno-version: 2.7.14
 
       - name: 📝 Format check
         run: deno fmt --check
@@ -80,6 +83,7 @@ jobs:
         id: setup-deno
         uses: denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282 # v2.0.4
         with:
+          deno-version: 2.7.14
           cache: true
 
       - name: 📦 Install dependencies
@@ -107,6 +111,7 @@ jobs:
         id: setup-deno
         uses: denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282 # v2.0.4
         with:
+          deno-version: 2.7.14
           cache: true
 
       - name: 📦 Install dependencies
@@ -141,6 +146,8 @@ jobs:
 
       - name: 🦕 Set up Deno
         uses: denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282 # v2.0.4
+        with:
+          deno-version: 2.7.14
 
       - name: 📦 Dry run publish
         run: deno publish --dry-run
