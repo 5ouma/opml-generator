@@ -8,7 +8,7 @@
     "jsr:@std/fmt@^1.0.10": "1.0.10",
     "jsr:@std/internal@^1.0.12": "1.0.14",
     "jsr:@std/internal@^1.0.14": "1.0.14",
-    "jsr:@std/path@1.1.4": "1.1.4",
+    "jsr:@std/path@1.1.5": "1.1.5",
     "jsr:@std/toml@1.0.11": "1.0.11",
     "jsr:@wok/case@1.0.3": "1.0.3"
   },
@@ -38,10 +38,10 @@
     "@std/internal@1.0.14": {
       "integrity": "291516b3d4c35024d6ffbc0a9df5bf4c64116e05b50012cf846710152d2ffdf7"
     },
-    "@std/path@1.1.4": {
-      "integrity": "1d2d43f39efb1b42f0b1882a25486647cb851481862dc7313390b2bb044314b5",
+    "@std/path@1.1.5": {
+      "integrity": "ccea00982ea28c36becaf6e62f855406c76a8c32d462f66f415bbb7d83a271bc",
       "dependencies": [
-        "jsr:@std/internal@^1.0.12"
+        "jsr:@std/internal@^1.0.14"
       ]
     },
     "@std/toml@1.0.11": {
@@ -59,7 +59,7 @@
       "jsr:@libs/xml@7.0.4",
       "jsr:@std/assert@1.0.19",
       "jsr:@std/cli@1.0.30",
-      "jsr:@std/path@1.1.4",
+      "jsr:@std/path@1.1.5",
       "jsr:@std/toml@1.0.11",
       "jsr:@wok/case@1.0.3"
     ]
