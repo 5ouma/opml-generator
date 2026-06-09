@@ -36,14 +36,20 @@ jobs:
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           token: ${{ steps.app-token.outputs.token }}
-          persist-credentials: true
+          persist-credentials: false
 
-      - name: 🏷️ Release a New Version
+      - name: 🔐 Set up Credential Helper
+        run: gh auth setup-git
+        env:
+          GH_HOST: github.com
+
+      - name: 🔖 Release a new version
         id: tagpr
         uses: Songmu/tagpr@e84001bd5dac8defa0c75b3913937d284a3b3660 # v1.20.0
         with:
           config: .github/tagpr.ini
         env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
 
   publish:
