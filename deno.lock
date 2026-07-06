@@ -4,7 +4,7 @@
     "jsr:@libs/xml@7.0.4": "7.0.4",
     "jsr:@std/assert@1.0.19": "1.0.19",
     "jsr:@std/cli@1.0.31": "1.0.31",
-    "jsr:@std/collections@^1.1.3": "1.2.0",
+    "jsr:@std/collections@^1.1.3": "1.3.0",
     "jsr:@std/fmt@^1.0.10": "1.0.10",
     "jsr:@std/internal@^1.0.12": "1.0.14",
     "jsr:@std/internal@^1.0.14": "1.0.14",
@@ -29,8 +29,8 @@
         "jsr:@std/internal@^1.0.14"
       ]
     },
-    "@std/collections@1.2.0": {
-      "integrity": "47627a21d3a13138b77fd0e4d790ba9d2e603c3510b686cde6b132fe9aa98a88"
+    "@std/collections@1.3.0": {
+      "integrity": "eb36b43d784477ea0b476483ac034a14bdd182aff921c812ecf662a1fcef9498"
     },
     "@std/fmt@1.0.10": {
       "integrity": "90dfba288802ac6de82fb31d0917eb9e4450b9925b954d5e51fc29ac07419db5"
