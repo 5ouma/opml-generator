@@ -32,7 +32,7 @@ OPML Generator has 2 ways to convert TOML to OPML.
 2. Run this command
 
    ```she
-   deno run -A jsr:@5ouma/opml-generator
+   deno x jsr:@5ouma/opml-generator
    ```
 
 3. Outputs are stored in the `outputs` directory separated by `lists`
