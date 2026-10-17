@@ -8,6 +8,14 @@ on:
 
 permissions: {}
 
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   tagpr:
     name: 🔖 Release a New Version
