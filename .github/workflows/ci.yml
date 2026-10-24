@@ -29,7 +29,7 @@ jobs:
     name: 🧹 Lint Check
     permissions:
       contents: read
-    runs-on: Ubuntu-Slim
+    runs-on: ubuntu-slim
     timeout-minutes: 2
 
     steps:

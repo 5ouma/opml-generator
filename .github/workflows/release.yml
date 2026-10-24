@@ -22,7 +22,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    runs-on: Ubuntu-Slim
+    runs-on: ubuntu-slim
     environment:
       name: Release
       deployment: false
