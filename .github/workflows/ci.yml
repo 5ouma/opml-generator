@@ -34,13 +34,13 @@ jobs:
 
     steps:
       - name: 🚚 Check out repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 
       - name: 🦕 Set up Deno
         id: setup-deno
-        uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
+        uses: denoland/setup-deno@v2.0.5
         with:
           deno-version: v2.9.8
           cache: true
@@ -64,12 +64,12 @@ jobs:
 
     steps:
       - name: 🚚 Check out repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 
       - name: 🦕 Set up Deno
-        uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
+        uses: denoland/setup-deno@v2.0.5
         with:
           deno-version: v2.9.8
 
@@ -85,13 +85,13 @@ jobs:
 
     steps:
       - name: 🚚 Check out repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 
       - name: 🦕 Set up Deno
         id: setup-deno
-        uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
+        uses: denoland/setup-deno@v2.0.5
         with:
           deno-version: v2.9.8
           cache: true
@@ -115,13 +115,13 @@ jobs:
 
     steps:
       - name: 🚚 Check out repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 
       - name: 🦕 Set up Deno
         id: setup-deno
-        uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
+        uses: denoland/setup-deno@v2.0.5
         with:
           deno-version: v2.9.8
           cache: true
@@ -134,13 +134,13 @@ jobs:
         run: deno task test:cov
 
       - name: ☂️ Upload coverage
-        uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
+        uses: codecov/codecov-action@v7.1.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: ☂️ Upload test results
         if: ${{ !cancelled() }}
-        uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
+        uses: codecov/codecov-action@v7.1.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           report_type: test_results
@@ -154,12 +154,12 @@ jobs:
 
     steps:
       - name: 🚚 Check out repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 
       - name: 🦕 Set up Deno
-        uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
+        uses: denoland/setup-deno@v2.0.5
         with:
           deno-version: v2.9.8
 
