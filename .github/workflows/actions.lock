@@ -8,21 +8,21 @@ workflows:
         - 'codecov/codecov-action@v7.1.1'
         - 'denoland/setup-deno@v2.0.5'
     '.github/workflows/label-past-pr.yml':
-        - '5ouma/utils@v0.13.2'
+        - '5ouma/utils@v0.13.3'
     '.github/workflows/labeler.yml':
         - 'fuxingloh/multi-labeler@v5.0.0'
     '.github/workflows/merge-gatekeeper.yml':
         - 'upsidr/merge-gatekeeper@v1.2.1'
     '.github/workflows/pre-commit.yml':
-        - '5ouma/utils@v0.13.2'
+        - '5ouma/utils@v0.13.3'
     '.github/workflows/release.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/create-github-app-token@v3.4.0'
         - 'songmu/tagpr@v1.22.0'
 dependencies:
-    '5ouma/utils@v0.13.2':
-        ref: 'v0.13.2'
-        commit: 'sha1-ffc700f002ebcb26f8ed359820dead1bc1d43834'
+    '5ouma/utils@v0.13.3':
+        ref: 'v0.13.3'
+        commit: 'sha1-1e7a66fb00da1446aa2ac2610ac9cf025c8aa93f'
         owner_id: 101255979
         repo_id: 849736738
         uses:
@@ -30,6 +30,7 @@ dependencies:
             - 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1'
             - 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3'
             - 'actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e'
+            - 'j178/prek-action@44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d'
             - 'pre-commit-ci/lite-action@062bca0919bc9d6e66755cc05074b70c77e111fc'
     'actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9':
         ref: 'v6.1.0'
@@ -83,6 +84,11 @@ dependencies:
         commit: 'sha1-bcd50af464202999e57f556b4aefcf05a34abf85'
         owner_id: 4266087
         repo_id: 329257641
+    'j178/prek-action@44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d':
+        ref: 'v3.1.0'
+        commit: 'sha1-44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d'
+        owner_id: 10510431
+        repo_id: 1052387486
     'pre-commit-ci/lite-action@062bca0919bc9d6e66755cc05074b70c77e111fc':
         ref: 'v1.2.0'
         commit: 'sha1-062bca0919bc9d6e66755cc05074b70c77e111fc'
